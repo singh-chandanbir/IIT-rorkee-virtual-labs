@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link href="../CDN_folder/Font(zacbel-x).css" rel="stylesheet">
+    <link href="../CDN_folder/Font(foco-trial).css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@firestitch/jsplumb@2.12.0/dist/js/jsplumb.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!--ROW1-->
+        <div class="heading">
+            <!--Heading goes here-->
+            <p>TO VERIFY SUPERPOSITION PRINCIPLE</p>
+        </div>
+
+        <div class="instructions" id="instTab">
+            <div class="insHeading">
+                <p>Instructions</p>
+
+                <ul class="steps">
+                    <li>!! Click on the labels to delete connections for the corrusponding label.</li>
+                    <li id="s1">Choose values of R1, R2, R3 and Power-Supplies by adjusting the sliders.</li>
+                    <li id="s2">Connect only voltage source, and check your connections.</li>
+                        <ul>
+                            <li>Connect voltage source. 17->19, 18->20</li>
+                            <li>Leave connections for current supply open to as current supplies have infinite internal resistance. 1->11, 2->12, 3->13, 4->14, 5->15, 6->16</li>
+                        </ul>
+                    <li id="s3">Click 'CHECK' button to check connections.</li>
+                    <li id="s4">Turn the connected Power-Supplies (voltage source).</li>
+                    <li id="s5">Click the 'ADD' button to add observations to the table.</li>
+
+                    <li id="s6">Repeate the above steps, but connecting the current supply.</li>
+                        <ul>
+                            <li>Connect current souce. 7->9, 8->10</li>
+                            <li>Short curcit the connections for voltage source as voltage supplies have zero internal resistance. 1->11, 2->12, 3->13, 4->14, 5->15, 6->16</li>
+                        </ul>
+                    <li id="s7">Click on the 'ADD' button to add the values to observation table.</li>
+                    <li id="s8">
+                        Make connections and connect both Power Supplies to curcit.</li>
+                        <ul>
+                            <li>Connect ammeters (in series) to resistances, any ammeter can be connected to any resistor. , 1->11, 2->12, 3->13, 4->14, 5->15, 6->16 </li>
+                            <li>Connect positive and negative of both power supplies to the curcit. 7->9, 8->10, 17->19, 18->20</li>
+                        </ul>
+
+                    <li id="s9">Click 'CALCULATE' to varify that the readings match.</li>
+                    <li> Click in 'Verify' to varify the observations.</li>
+                </ul>
+            </div>
+            <div class="MyLabel">
+                <p>
+                    Instructions
+                </p>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!--ROW2-->
+        <div class="r2">
+
+            <div class="r2c1">
+
+
+                <div class="action-buttons">
+                    <p>ACTION BUTTONS</p>
+                    <div class="control-panel-buttons">
+                        <button id="check">CHECK</button>
+                        <button id="add" disabled="true">ADD</button>
+                        <button id="calculate" disabled="true">CALCULATE</button>
+                        <button id="reset" onclick='window.location.reload();'>RESET</button>
+                        <button id="print" disabled="true" onclick=' window.print();'>PRINT</button>
+                        <!--THIS IS TO BE KEPT IN A FLEX BOX-->
+                    </div>
+                </div>
+                <!--Row 2 Col 1 Row1-->
+
+                <div class="formulas">
+                   <p>SLIDERS</p>
+
+                   <input type="range" min="0.1" step="0.1" max="10" id="R1" name = "R1"value="0.1">
+                   <label for="R1">R1</label>
+
+                   <input type="range" min="0.1" step="0.1" max="10" id="R2"name = "R2" value="0.1">
+                   <label for="R2">R2</label>
+                   <input type="range" min="0.1" step="0.1" max="10" id="R3" name = "R3"value="0.1">
+                   <label for="R3">R3</label>
+
+                </div>
+
+
+                <!--Row 2 Col 1 Row2-->
+                <div class="o_table">
+                    <p>OBSERVATION TABLE</p>
+                    <div class="table">
+                        <!--TABLE TO BE DISPLAYED HERE-->
+                        <table id="valTable">
+                            <tr>
+                                <th>S.No.</th>
+                                <th>I 1</th>
+                                <th>I 2</th>
+                                <th>I 3</th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <!--Row 3 Col 1 -->
+
+
+
+            </div>
+
+
+            <div class="r2c2">
+
+                <div class="circuit">
+                    <p>EXPERIMENT</p>
+                    <div class="c-diag">
+                        <img src="../Assets/MCB_Off.png" id = "MCB" height = "120" width = "100" alt="" style="opacity: 0;">
+
+                        <img src="../Assets/V1.png" id = "A_1"height = "185" width = "185" alt="">
+                        <img src="../Assets/Pointer.png" height = "13" width = "52" id = "P_A1" alt="">
+
+                        <img src="../Assets/V2.png" id = "A_2" height = "185" width = "185" alt="">
+                    <img src="../Assets/Pointer.png" height = "13" width = "52" id = "P_A2" alt="">
+
+                    <img src="../Assets/V3.png" id = "A_3" height = "185" width = "185" alt="">
+                    <img src="../Assets/Pointer.png" height = "13" width = "52" id = "P_A3"alt="">
+
+                    <img src="../Assets/current_src _off.png" alt="" id = "power_1" height = "150" width = "260" >
+
+                    <img src="../Assets/circuit diagram_superposition.png" id = "circuit_diagram" alt="" height = "350" width = "550" >
+
+                    <img src="../Assets/voltage_src _off.png" alt="" id = "power_2" height = "150" width = "260">
+
+                    <div class="nodes">
+
+                        <div class="positive">
+                            <button id="p_mcb" disabled = "true"></button>
+                            <button id="n_mcb" disabled = "true"></button>
+                            <button id="on_mcb" disabled = "true"></button>
+
+                            <button id="p_a1"><label id = "label1" onclick="disconnect(0)">1</label></button>
+                            <button id="n_a1"><label id = "label2" onclick="disconnect(1)">2</label></button>
+                            <button id="p_a2"><label id = "label3" onclick="disconnect(2)">3</label></button>
+                            <button id="n_a2"><label id = "label4" onclick="disconnect(3)">4</label></button>
+                            <button id="p_a3"><label id = "label5" onclick="disconnect(4)">5</label></button>
+                            <button id="n_a3"><label id = "label6" onclick="disconnect(5)">6</label></button>
+
+
+                            <button id="p_power1"><label id = "label7" onclick="disconnect(6)">7</label></button>
+                            <button id="n_power1"><label id = "label8" onclick="disconnect(7)">8</label></button>
+                            <button id="on_power1" disabled="true"></button>
+
+                            <button id="c_p_power1"><label id = "label9" onclick="disconnect(8)">9</label></button>
+                            <button id="c_n_power1"><label id = "label10" onclick="disconnect(9)">10</label></button>
+
+
+                            <button id="c_p_a1"><label id = "label11" onclick="disconnect(10)">11</label></button>
+                            <button id="c_n_a1"><label id = "label12" onclick="disconnect(11)">12</label></button>
+                            <button id="c_p_a2"><label id = "label13" onclick="disconnect(12)">13</label></button>
+                            <button id="c_n_a2"><label id = "label14" onclick="disconnect(13)">14</label></button>
+                            <button id="c_p_a3"><label id = "label15" onclick="disconnect(14)">15</label></button>
+                            <button id="c_n_a3"><label id = "label16" onclick="disconnect(15)">16</label></button>
+
+                            <button id="c_p_power2"><label id = "label17" onclick="disconnect(16)">17</label></button>
+                            <button id="c_n_power2"><label id = "label18" onclick="disconnect(17)">18</label></button>
+
+
+
+                            <button id="p_power2"><label id = "label19" onclick="disconnect(18)">19</label></button>
+                            <button id="n_power2"><label id = "label20" onclick="disconnect(19)">20</label></button>
+                            <button id="on_power2" disabled="true"></button>
+
+
+                            <input type="text" class="SeeOnly" readonly id="R1Display" value="0.1">
+                            <input type="text" class="SeeOnly" readonly id="R2Display" value="0.1">
+                            <input type="text" class="SeeOnly" readonly id="R3Display" value="0.1">
+                            <input type="text" class="PSdisplay" class="SeeOnly" readonly id="PS1Display" value="0 A">
+                            <input type="text" class="PSdisplay" class="SeeOnly" readonly id="PS2Display" value="0 V">
+
+
+                        </div>
+
+
+                        <div class="slider_values">
+                            <input type="range" min="0" step="0.1" max="10" disabled="true" id="P1" value="0">
+                            <input type="range" min="0" step="0.1" max="10" disabled="true" id="P2" value="0">
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                    </div>
+
+
+                </div>
+
+
+                <!--Row 2 Col 2-->
+
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+
+        <div class="r3">
+            <div class="calculation" style="padding-top: -20px;">
+                <p style="margin-bottom: 5px; margin-top: 4px;">CALCULATIONS</p>
+                    <img src="../Assets/Superposition Principle.png" height = "440" width = "890" alt="">
+                    <br>
+                <input class="SeeOnly" readonly type="text" id="R1C">
+                <input class="SeeOnly" readonly type="text" id="R2C">
+                <input class="SeeOnly" readonly type="text" id="R3C">
+
+                <input class="SeeOnly" readonly type="text" id="currentSupplyC">
+                <input class="SeeOnly" readonly type="text" id="voltageSupplyC">
+
+                <input class="SeeOnly" readonly type="text" id="R1_cs">
+                <changeable-symbols><label id="sign1" onclick="changeSign('sign1')">±</label></changeable-symbols>
+                <input class="SeeOnly" readonly type="text" id="R2_cs">
+                <changeable-symbols><label id="sign2" onclick="changeSign('sign2')">±</label></changeable-symbols>
+                <input class="SeeOnly" readonly type="text" id="R3_cs">
+                <changeable-symbols><label id="sign3" onclick="changeSign('sign3')">±</label></changeable-symbols>
+
+                <input class="SeeOnly" readonly type="text" id="R1_vs">
+                <input class="SeeOnly" readonly type="text" id="R2_vs">
+                <input class="SeeOnly" readonly type="text" id="R3_vs">
+
+                <input class="SeeOnly" readonly type="text" id="R1_cv">
+                <input class="SeeOnly" readonly type="text" id="R2_cv">
+                <input class="SeeOnly" readonly type="text" id="R3_cv">
+
+                <input type="text" id="R1_cvU">
+                <input type="text" id="R2_cvU">
+                <input type="text" id="R3_cvU">
+
+                <button id="verify" onclick="VerifyUser()" disabled="true">Verify</button>
+
+            </div>
+            <div class="calc_output"></div>
+
+        </div>
+
+    </div>
+
+
+</body>
+<script src="../Function/function.js"></script>
+
+</html>

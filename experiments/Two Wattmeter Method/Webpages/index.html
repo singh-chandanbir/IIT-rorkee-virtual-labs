@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link href="../CDN_folder/Font(zacbel-x).css" rel="stylesheet">
+    <link href="../CDN_folder/Font(foco-trial).css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@firestitch/jsplumb@2.12.0/dist/js/jsplumb.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!--ROW1-->
+        <div class="heading">
+            <!--Heading goes here-->
+            <p>POWER CONSUMED BY THREE PHASE RESISTIVE LOAD BY 2 WATTMETER METHOD </p>
+        </div>
+
+        <div class="instructions" id="instTab">
+            <div class="insHeading">
+                <p>Instructions</p>
+
+                <ul class="steps">
+                    <li id="s1" style="color: red;">Make connections for all the meters.</li>
+                        <ul>
+                            <li>Connect the blue node (MCB) to M and C of wattmeter-2. 3->14, 3->15</li>
+                            <li>Connect yellow node to positive of voltmeter, V of wattmeter-2 and V of wattmeter-1. 2->4, 2->8, 2->12</li>
+                            <li>Connect to red node to negative of voltmeter and positive of ammeter. 1->5, 1->6</li>
+                            <li>Connect negative of ammeter to M and C of wattmeter-1. 7->10, 7->11</li>
+                            <li>Connections for yellow, red and blue can be exchanged, also wattmeter-1 and wattmeter-2 can be exchanged.</li> 
+                        </ul>
+
+
+                    <li id="s2">Make connections of loads in STAR configuration.</li>
+                        <ul>
+                            17->19, 19->21, 12->18, 9->16, 13->20
+                        </ul>               
+                    <li id="s3">Click on 'CHECK' to check connections.</li>
+                    
+                    <li id="s4">Switch on the MCB and adjust the voltage slider to vary voltage.</li>
+
+                    <li id="s5"> and click on 'ADD' to add observations to the table.</li>
+
+                    <li id="s6">Make connections in Delta configuration, and click on 'CHECK'</li>
+                        <ul>
+                            16->9, 18->12, 20->13, 21->18, 19->16, 17->20
+                        </ul>
+                    <li id="s7">Switch on the MCB and click on 'ADD' to add observations to the table.</li>
+
+                    <li id="s8">Type the observations in calculation tab and click on 'Calculate Delta' and 'Calculate Star' to calculate readings for the experiment.</li>
+
+                </ul>
+
+            </div>
+            <div class="MyLabel">
+                <p>
+                    Instructions
+                </p>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!--ROW2-->
+        <div class="r2">
+
+            <div class="r2c1">
+
+
+                <div class="action-buttons">
+                    <p>ACTION BUTTONS</p>
+                    <div class="control-panel-buttons">
+                        <button id="check">CHECK</button>
+                        <button id="add" disabled="true">ADD</button>
+                        <button id="reset">RESET</button>
+                        <button id="print" disabled="true" onclick=' window.print();'>PRINT</button>
+                        <!--THIS IS TO BE KEPT IN A FLEX BOX-->
+                    </div>
+                </div>
+                <!--Row 2 Col 1 Row1-->
+
+                <div class="formulas">
+                    <p>FORMULA</p>
+
+                    \[Total Power = Power_{W1} + Power_{W2}\]
+                    <!-- <input type="range" min="0.1" max="10" step="1" value="0.1" id="R1">
+                    <label for="R1">R1</label>
+                    <input type="range" min="0.1" max="10" step="1" value="0.1" id="R2">
+                    <label for="R2">R2</label>
+                    <input type="range" min="0.1" max="10" step="1" value="0.1" id="R3">
+                    <label for="R3">R3</label> -->
+                </div>
+
+                <!--Row 2 Col 1 Row2-->
+                <div class="o_table">
+                    <p>OBSERVATION TABLE</p>
+                    <div class="table">
+                        <!--TABLE TO BE DISPLAYED HERE-->
+                        <table id="valTable">
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Load</th>
+                                <th>Vl(V)</th>
+                                <th>Il(A)</th>
+                                <th>W1(W)</th>
+                                <th>W2(W)</th>
+                                <th>W = W1 + W2</th>
+                                <!-- <th>P = &#8730;3.Vl.Il.cos(&#981;) </th> -->
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <!--Row 3 Col 1 -->
+
+
+
+            </div>
+
+
+            <div class="r2c2">
+
+                <div class="circuit">
+                    <p>EXPERIMENT</p>
+                    <div class="c-diag">
+
+                        <div class="voltmeter">
+                            <img src="../Assets/V1.png" id="V" height="180" width="180" alt="">
+                            <img src="../Assets/Pointer.png" height="11" width="44" id="P_V" alt="">
+                            <button id="p_v"><label id = "label4" onclick="disconnect(3)">4</label></button>
+                            <button id="n_v"><label id = "label5" onclick="disconnect(4)">5</label></button>
+
+                        </div>
+
+                        <!--------------------------------------------------------->
+
+                        <div class="ammeter">
+                            <img src="../Assets/A1.png" id="A" height="180" width="180" alt="">
+                            <img src="../Assets/Pointer.png" height="11" width="44" id="P_A" alt="">
+                            <button id="p_a"><label id = "label6" onclick="disconnect(5)">6</label></button>
+                            <button id="n_a"><label id = "label7" onclick="disconnect(6)">7</label></button>
+
+                        </div>
+                        <!--------------------------------------------------------->
+                        <div class="wattmeter1">
+                            <img src="../Assets/wattmeter.png" id="W1" height="200" width="200" alt="">
+                            <img src="../Assets/Pointer.png" height="13" width="56" id="P_W1" alt="">
+                            <button id="v_w1"><label id = "label8" onclick="disconnect(7)">8</label></button>
+                            <button id="l_w1"><label id = "label9" onclick="disconnect(8)">9</label></button>
+                            <button id="m_w1"><label id = "label10" onclick="disconnect(9)">10</label></button>
+                            <button id="c_w1"><label id = "label11" onclick="disconnect(10)">11</label></button>
+
+
+
+                        </div>
+                        <!--------------------------------------------------------->
+                        <div class="wattmeter2">
+                            <img src="../Assets/wattmeter.png" id="W2" height="200" width="200" alt="">
+                            <img src="../Assets/Pointer.png" height="13" width="56" id="P_W2" alt="">
+                            <button id="v_w2"><label id = "label2" onclick="disconnect(11)">12</label></button>
+                            <button id="l_w2"><label id = "label3" onclick="disconnect(12)">13</label></button>
+                            <button id="m_w2"><label id = "label4" onclick="disconnect(13)">14</label></button>
+                            <button id="c_w2"><label id = "label5" onclick="disconnect(14)">15</label></button>
+
+                        </div>
+                        <!--------------------------------------------------------->
+
+
+
+                        <div class="mcb">
+                            <img src="../Assets/MCB_Off.png" id="M" height="130" width="130" alt="">
+                            <button id="on_power" disabled="true"></button>
+                            <button id="mcb_r"><label id = "label1" onclick="disconnect(0)">1</label></button>
+                            <button id="mcb_b"><label id = "label2" onclick="disconnect(1)">2</label></button>
+                            <button id="mcb_y"><label id = "label3" onclick="disconnect(2)">3</label></button>
+                        </div>
+                        <!--------------------------------------------------------->
+
+
+                    </div>
+                    <div class="loads">
+                        <p>LOADS</p>
+
+                        <img src="../Assets/r_off.png" id="R-lamp" height="90" width="290" alt="">
+                        <button id="r_start"><label id = "label16" onclick="disconnect(15)">16</label></button>
+                        <button id="r_end"><label id = "label17" onclick="disconnect(16)">17</label></button>
+
+
+
+                        <img src="../Assets/y_off.png" id="Y-lamp" height="90" width="290" alt="">
+                        <button id="y_start"><label id = "label18" onclick="disconnect(17)">18</label></button>
+                        <button id="y_end"><label id = "label19" onclick="disconnect(18)">19</label></button>
+
+
+
+                        <img src="../Assets/b_off.png" id="B-lamp" height="90" width="290" alt="">
+                        <button id="b_start"><label id = "label20" onclick="disconnect(19)">20</label></button>
+                       <button id="b_end"><label id = "label21" onclick="disconnect(20)">21</label></button>
+
+
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+
+        <div class="r3">
+            <div class="calculation">
+                <p>CALCULATIONS</p>
+                <img class="calculations" src="../Assets/calculations.png">
+                <input type="text" id="VLStar">
+                <input type="text" id="ILStar">
+                <input type="text" id="cosStar">
+                <input type="text" id="powStar">
+                <input class="verify" style="width:160px;" type="button" onclick="multiplyStar()" value ="Calculate Star" id="verify1" disabled="true">
+
+                <input type="text" id="VLDelta">
+                <input type="text" id="ILDelta">
+                <input type="text" id="cosDelta"><br>
+                <input type="text" id="powDelta">
+                <input class="verify" style="width: 160px;" type="button" onclick="multiplyDelta()" value="Calculate Delta" id="verify2" disabled="true">
+                
+            </div>
+            <div class="calc_output"></div>
+
+        </div>
+
+    </div>
+
+
+</body>
+<script src="../Function/function.js"></script>
+<!-- latex cdn -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/startup.js"></script> -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"></script>
+
+</html>

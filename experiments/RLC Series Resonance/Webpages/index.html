@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <!-- <link rel="stylesheet" href="../Style/disabledrag.css"> -->
+    <link href="../CDN_folder/Font(zacbel-x).css" rel="stylesheet">
+    <link href="../CDN_folder/Font(foco-trial).css" rel="stylesheet">
+    <link href="../CDN_folder/SevenSegmentFont.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@firestitch/jsplumb@2.12.0/dist/js/jsplumb.min.js"></script>
+    <script src="../CDN_folder/ChartCDN.js"></script>
+
+</head>
+
+<body>
+    <div id="container" class="container">
+        <!--ROW1-->
+        <div class="heading">
+            <!--Heading goes here-->
+            <p> To Determine Resonance Frequency in a series RLC circuit</p>
+        </div>
+
+        <div class="instructions" id="instTab">
+            <div class="insHeading">
+                <p>Instructions</p>
+
+                <ul class="steps">
+                    <li>!!! Click on labels to delete connectinos for the corrusponding node.</li>
+                    <li id="s1" style="color:red ;">Make connections as per the instructions given below.</li>
+                    <ul>
+                        <li>1->13, 2->14</li>
+                        <li>3->15, 4->16</li>
+                        <li>5->15, 9->16</li>
+                        <li>6->7, 8->12, 10->11</li>
+                    </ul>
+                    <li id="s2"> Now, Check the connections by clicking on ‘CHECK’ button.</li>
+                    <ul>
+                        <li>If the connections are ‘Invalid connections’ click on corresponding node to remove the
+                            connection.</li>
+                        <li>And if the connections are ‘Right Connections’ then follow the below steps.</li>
+                    </ul>
+                    <li id="s3"> Turn on the MCB.</li>
+                    <li id="s4">Click on Function Generator ‘Power’ button.</li>
+                    <li id="s5"> Vary the frequency by moving the slider.
+                    </li>
+                    <li id="s6">Click on ‘ADD’ button to add the readings in the observation table.</li>
+                    <li id="s7">Repeat the above steps to get atleast 6 observations.</li>
+                    <!-- <li id="s8">Click on ‘PLOT’ button to plot the graph.</li> -->
+                    <li id="s9">Now manually input the values in caluclation tab.</li>
+
+                </ul>
+            </div>
+            <div class="MyLabel">
+                <p>
+                    Instructions
+                </p>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!--ROW2-->
+        <div class="r2">
+
+            <div class="r2c1">
+
+
+                <div class="action-buttons">
+                    <p>ACTION BUTTONS</p>
+                    <div class="control-panel-buttons">
+                        <button id="check">CHECK</button>
+                        <button id="add" disabled="true">ADD</button>
+                        <!-- <button id="plot" disabled="true">PLOT</button> -->
+                        <button id="reset" onclick='window.location.reload();'>RESET</button>
+                        <button id="print" onclick=' window.print();'>PRINT</button>
+                        <!--THIS IS TO BE KEPT IN A FLEX BOX-->
+                    </div>
+                </div>
+                <!--Row 2 Col 1 Row1-->
+
+                <div class="sliders">
+                    <p>SLIDERS</p>
+
+                    \[Quality Factor = \frac{2 \pi f_{r}L}{R}\]
+                    \[f_{r} = \frac{1}{2 \pi \sqrt{LC}}\]
+
+                    <label for="RL">Voltage</label>
+
+
+                </div>
+                <!--Row 2 Col 1 Row2-->
+                <div class="o_table">
+                    <p> OBSERVATION TABLE</p>
+                    <div class="table">
+                        <!--TABLE TO BE DISPLAYED HERE-->
+                        <table id="valTable">
+                            <tr>
+                                <th>S.No</th>
+                                <th>Voltage</th>
+                                <th>Current</th>
+                                <th>Frequency</th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <!--Row 3 Col 1 -->
+
+
+
+            </div>
+
+
+            <div class="r2c2">
+
+                <div class="circuit">
+                    <p>EXPERIMENT</p>
+                    <div class="c-diag">
+
+                        <div class="mcb">
+
+
+                            <img class="forbidden" src="../Assets/MCB_Off.png" alt="" height="120" width="100" id="mcb">
+                            <button id="mcb_switch" disabled="true"></button>
+                            <button id="mcb_p"><label onclick="disconnect(0)">1</label></button>
+                            <button id="mcb_n"><label onclick="disconnect(1)">2</label></button>
+
+                        </div>
+
+
+                        <div class="fix">
+                            <div class="voltmeter">
+                                <img class="forbidden" src="../Assets/V1.png" width="179" height="179" alt="" id="V">
+                                <img class="forbidden" src="../Assets/Pointer.png" width="44" height="14" alt=""
+                                    id="P_V">
+                                <button id="p_v"><label onclick="disconnect(2)">3</label></button>
+                                <button id="n_v"><label onclick="disconnect(3)">4</label></button>
+
+                            </div>
+                        </div>
+
+
+                        <div class="ammeter">
+                            <img class="forbidden" src="../Assets/A1.png" width="179" height="179" alt="" id="A">
+
+                            <img class="forbidden" src="../Assets/Pointer.png" width="44" height="14" alt="" id="P_A">
+                            <button id="p_a"><label onclick="disconnect(4)">5</label></button>
+                            <button id="n_a"><label onclick="disconnect(5)">6</label></button>
+                        </div>
+
+                        <div class="break">
+                            <br>
+                        </div>
+                        <div class="rlc">
+                            <div class="rheostat">
+
+                                <img class="forbidden" src="../Assets/resistor.png" width="300" height="300" alt=""
+                                    id="rheostat">
+                                <button id="rh_p"><label onclick="disconnect(6)">7</label></button>
+                                <button id="rh_n"><label onclick="disconnect(7)">8</label></button>
+
+                            </div>
+
+                            <div class="inductor">
+                                <img class="forbidden" src="../Assets/inductor.png" width="200" height="150" alt=""
+                                    id="inductor">
+                                <button id="i_p"><label onclick="disconnect(8)">9</label></button>
+                                <button id="i_n"><label onclick="disconnect(9)">10</label></button>
+
+
+
+                            </div>
+
+                            <div class="capacitor">
+                                <img class="forbidden" src="../Assets/capacitor.png" width="250" height="250" alt=""
+                                    id="capacitor">
+                                <button id="c_n"><label onclick="disconnect(10)">11</label></button>
+                                <button id="c_p"><label onclick="disconnect(11)">12</label></button>
+
+
+
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+                        <div class="transformer">
+
+                            <input class="forbidden" id="fg_dis" type="text" value="0 Hz" disabled="true">
+
+                            <button id="fg_on" disabled="true"></button>
+
+                            <button id="fg_a"><label onclick="disconnect(12)">13</label></button>
+                            <button id="fg_b"><label onclick="disconnect(13)">14</label></button>
+                            <button id="fg_c"><label onclick="disconnect(14)">15</label></button>
+                            <button id="fg_d"><label onclick="disconnect(15)">16</label></button>
+
+
+
+                            <img class="forbidden" src="../Assets/function-generator-off.png" width="400" height="250"
+                                alt="" id="transformer">
+                            <input type="range" disabled='true' name="RL" id="RL" , min="0" max="8" step="1" value="0">
+
+
+
+                        </div>
+
+
+
+
+
+                    </div>
+
+                </div>
+
+
+                <!--Row 2 Col 2-->
+
+
+            </div>
+
+        </div>
+        <div class="clear"></div>
+
+
+
+
+
+
+
+
+
+        <div class="r3">
+            <div class="r3c1">
+                <div class="graph" id="plotContiner">
+                    <p>CALCULATIONS</p>
+                </div>
+                <img src="../Assets/7.png" id="calcImage">
+                <input id="fr">
+                <input id="QF"><br>
+                <button id="verify" disabled="true">verify</button>
+            </div>
+            <div class="calc_output"></div>
+        </div>
+    </div>
+
+
+
+
+    <div class="clear"></div>
+
+
+    </div>
+
+
+</body>
+<script src="../Function/function.js"></script>
+<!-- latex cdn -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/startup.js"></script> -->
+<script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"></script>
+
+</html>

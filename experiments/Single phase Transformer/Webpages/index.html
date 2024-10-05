@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Labs|| To study Efficiency of Single-phase Transformer by load test</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link href="../CDN_folder/Font(zacbel-x).css" rel="stylesheet">
+    <link href="../CDN_folder/Font(foco-trial).css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@firestitch/jsplumb@2.12.0/dist/js/jsplumb.min.js"></script>
+    <script src="../CDN_folder/ChartCDN.js"></script>
+
+    <link rel="icon" href="../Assets/logo.jpg" type="image/x-icon">
+
+    <!--  CDN link for the Math properties -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/startup.js"
+        integrity="sha512-TVq6RFk599KMqPh7Ri0yEAxHbJ0dcxSSPgvMuzQUg0wu4z+X7z2PsibMbbzAq/AHloHdxMW0FdvKv9k4s8niuA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"> </script>
+
+
+
+    <!--  Ajax Library-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+        integrity="sha512-eHx4nbBTkIr2i0m9SANm/cczPESd0DUEcfl84JpIuutE6oDxPhXvskMR08Wmvmfx5wUpVjlWdi82G5YLvqqJdA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <!-- Jquery library-->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"
+        integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--  Jqueryui Library-->
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
+        integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!--JSPLUMB LIBRARY-->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.6/js/jsplumb.min.js"
+        integrity="sha512-yGgPLFnBGQP4L4+2eTbGj0uLoq+CLXmP2+c/hXWdmLYB9jEBfVGjxIqtvFneLCKATOZhDf2YPYG4uSEksWXp+g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <style>
+        footer {
+
+            position: relative;
+            margin-top: 10px;
+            text-align: center;
+            padding: 3px;
+            background-color: #606471;
+            color: white;
+            font-size: 18px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!--ROW1-->
+        <div class="heading">
+            <!--Heading goes here-->
+
+            <p> To Study Efficiency of Single-phase Transformer by Load test </p>
+
+        </div>
+
+        <div class="instructions" id="instTab">
+            <div class="insHeading">
+                <p>Instructions</p>
+
+                <ul class="steps">
+                    <li id="s1"><b> Step 1:</b> Make connections as per the instructions given below:</li><br>
+
+                    (a) (1-3 , 2-4) <br>
+                    (b) (5-7 , 6-8)<br>
+                    (c) (7-9 , 10-13, 13-14)<br>
+                    (d) (12-15 ,8-11, 11-16)<br>
+                    (e) (17-21, 18-22)<br>
+                    (f) (21-23)<br>
+                    (g) (24-27,27-28)<br>
+                    (h) (22-25) <br>
+                    (i) (19-26,20-25)<br><br>
+
+
+                    <li id="s3"><b> Note: Click on the label to delete the connection for the corresponding node </b>
+                    </li><br>
+
+
+                    <li id="s4"><b>(a)</b>Now, Check the connections by clicking on <b>‘CHECK’</b> button.</li><br>
+                    <li id="s4"><b>(b)</b>If the connections are <b> ‘Invalid connections’</b> the webpage will reload
+                        automatically.</li> <br>
+                    <li id="s5"><b>(c)</b>And if the connections are <b> ‘Right Connections’</b> then follow the below
+                        steps.</li> <br>
+
+                    <li id="s6"><b>Step 2:</b>Turn on the MCB.</li><br>
+                    <li id="s7"><b>Step 3:</b> Then, switch on the variac by clicking on the button.</li><br>
+                    <li id="s8"><b>Step 4:</b>Then, Click on the variac knob to set the voltage at 230V.</li><br>
+
+                    <li id="s8"><b> Note: Once, we have click on the variac knob it automatically set to 230V. So we
+                            don’t have to set it again. </b> </li><br>
+
+                    <li id="s9"><b>Step 5:Case 1:</b>Then, Click on the <b> switch1</b> to Turn on the first row of the
+                        Lamp load.</li><br>
+                    <li id="s10"><b>Step 6:</b>Now, Click on <b> ‘ADD’</b> button to add the readings in the observation
+                        table. </li><br>
+                    <li id="s11"><b>Step 7:Case 2:</b>Then, Click on the <b> switch2</b> to Turn on the Second row of
+                        the Lamp load.</li> <br>
+                    <li id="s12"><b>Step 8:</b>Now, Click on <b>‘ADD’ </b> button to add the readings in the observation
+                        table.</b></li><br>
+                    <li id="s13"><b>Step 9:Case 3:</b>Then, Click on the <b> switch3</b> to Turn on the third row of the
+                        Lamp load.</li><br>
+                    <li id="s14"><b>Step 10:</b>Now, Click on <b>‘ADD’</b> button to add the readings in the observation
+                        table. </li><br>
+                    <li id="s15"><b>Step 11:</b>Click on <b>‘CALCULATE’</b> button to calculate the Efficiency and
+                        Regulation.</li> <br>
+                    <li id="s16"><b>Step 12:</b>Now, Click on <b>‘PLOT’</b> button to plot the graph.</b></li><br>
+                    <li id="s17"><b>Step 13:</b>Click on <b>‘PRINT’</b> button to takeout the print of the webpage.</li>
+                    <br>
+                    <li id="s18"><b>Step 14:</b>Click on <b>‘RESET’</b> button to reload the webpage.</li><br>
+
+                </ul>
+
+            </div>
+
+            <div class="MyLabel">
+                <p>
+                    Instructions
+                </p>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!--ROW2-->
+        <div class="r2">
+
+            <div class="r2c1">
+                <div class="action-buttons">
+                    <p><b>ACTION BUTTONS</b></p>
+                    <div class="control-panel-buttons">
+                        <button id="check" disabled>CHECK</button>
+                        <button id="add" disabled="true">ADD</button>
+                        <button id="plot">PLOT</button>
+                        <button id="reset" onclick='window.location.reload();'>RESET</button>
+                          <button id="print" onclick=' window.print();' disabled="true">PRINT</button> 
+                        <!--THIS IS TO BE KEPT IN A FLEX BOX-->
+                    </div>
+                </div>
+                <!--Row 2 Col 1 Row1-->
+
+                <div class="formulas">
+                    <p><b>FORMULAS</b></p>
+                    <!--   <formula-text>Power Factor <br> = True Power/Apparent Power
+                        <br>
+                          = cos(Phase angle)
+                            </formula-text>      -->
+
+                    <b> Efficiency= Output power / Input power * 100 <br>
+
+                        Regulation = Vso - Vs/ Vso * 100 <br>
+                        Where, <br>
+                        Vso- Secondary terminal voltage at no-load. <br>
+                        Vs - Secondary terminal voltage on load. </b><br>
+
+                </div>
+
+                <!--Row 2 Col 1 Row2-->
+
+                <div class="o_table">
+
+                    <p><b>OBSERVATION TABLE</b></p>
+                    <div class="table">
+
+                        <!--TABLE TO BE DISPLAYED HERE-->
+
+                        <table style="margin-top: 25px;" id="valTable">
+
+                            <tr>
+
+                            <tr>
+                                <th style="width:100px; position:absolute; margin-left:30px;margin-top:-27px;"> Input
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th style="width:42px; position:absolute; margin-left:140px;margin-top:-27px;"> MF=1
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th style="width:100px; position:absolute; margin-left:190px;margin-top:-30px;"> Output
+                                </th>
+                            </tr>
+
+                            <tr>
+                                <th style="width:42px; position:absolute; margin-left:300px;margin-top:-30px;"> MF=2
+                                </th>
+                            </tr>
+
+                            <th>S.No.</th>
+                            <th>V1 &nbsp(V)</th>
+                            <th>A1 &nbsp(A)</th>
+                            <th>W1 &nbsp(W)</th>
+                            <th>V2 &nbsp(V)</th>
+                            <th>A2 &nbsp(A)</th>
+                            <th>W2 &nbsp(W)</th>
+                            <th> &#x3b7;(%) Efficiency</th>
+                            <th> % Regulation </th>
+
+                        </table>
+                    </div>
+                </div>
+                <!--Row 3 Col 1 -->
+
+            </div>
+
+            <div class="r2c2">
+
+                <div class="circuit">
+                    <p> &nbsp;&nbsp;</p>>
+                    <div class="c-diag">
+
+                        <div id="wattmeter_one">1</div>
+                        <div id="wattmeter_two">2</div>
+                        <div id="mcb_1"> MCB </div>
+                        <!-- <button id="on_mcb"></button> -->
+                        <!-- Starting the new HAND OF BUZZER-->
+
+                        <div id="variac_1"> VARIAC </div>
+
+                        <div id="transformer_1"> TRANSFORMER </div>
+
+                        <img class="forbidden" src="../Assets/MCB_Off.png" id="MCB" height="120" width="100" alt="">
+
+                        <img class="forbidden" src="../Assets/V1.png" id="V" height="180" width="180" alt="">
+                        <img class="forbidden" src="../Assets/Pointer.png" height="11" width="44" id="P_V" alt="">
+
+                        <img class="forbidden" src="../Assets/A1.png" id="A" height="180" width="180" alt="">
+                        <img class="forbidden" src="../Assets/Pointer.png" height="11" width="44" id="P_A" alt="">
+
+                        <img class="forbidden" src="../Assets/wattmeter.png" id="W" height="220" width="220" alt="">
+                        <img class="forbidden" src="../Assets/Pointer.png" height="15" width="60" id="P_W" alt="">
+
+                        <img class="forbidden" src="../Assets/Variac_Knob.png" id="Var_Knob" height="100" width="100"
+                            alt="">
+                        <img class="forbidden" src="../Assets/Variac_OFF.png" id="Var" height="400" width="410" alt="">
+
+
+                        <!--   <img class="forbidden" src="../Assets/Fuse_normal.png" id="fuse" height="40" width="120" alt="">   -->
+
+
+                        <div class="loads">
+
+                            <p><b>LOADS</b></p>
+
+                            <img src="../Assets/r_off.png" id="R-lamp" height="90" width="290" alt="">
+                            <button id="r_start"></button>
+                            <button id="r_end"></button>
+
+                            <img src="../Assets/y_off.png" id="Y-lamp" height="90" width="290" alt="">
+                            <button id="y_start"></button>
+                            <button id="y_end"></button>
+
+                            <img src="../Assets/b_off.png" id="B-lamp" height="90" width="290" alt="">
+                            <button id="b_start"></button>
+                            <button id="b_end"></button>
+
+                        </div>
+
+                        <!--    <div class="loads" id="loadContain">
+                            <input type="button" id="up" value = "Click to select load">
+                            <img class="forbidden" src="../Assets/Loads/NoLoad.png" id="loadImg" height="150" width="300" alt="">
+
+                        </div>   -->
+
+                        <div class="nodes">
+
+                            <div class="positive">
+
+                                <button id="p_mcb"> <label onclick="disconnect(0)">1</label> </button>
+                                <button id="n_mcb"> <label onclick="disconnect(1)">2</label> </button>
+                                <button id="a_var"> <label onclick="disconnect(2)">3</label> </button>
+                                <button id="b_var"> <label onclick="disconnect(3)">4</label> </button>
+                                <button id="c_var"> <label onclick="disconnect(4)">5</label> </button>
+                                <button id="d_var"> <label onclick="disconnect(5)">6</label> </button>
+
+                                <!--  <button id="on_mcb"></button> -->
+                                <!--  <button id="p_fuse"></button> -->
+                                <!--  <button id="n_fuse"></button> -->
+                                <!--  <button id="p_switch"></button>-->
+                                <!--  <button id="n_switch"></button>-->
+
+                                <button id="p_v"> <label onclick="disconnect(6)">7</label> </button>
+                                <button id="n_v"> <label onclick="disconnect(7)">8</label> </button>
+                                <button id="p_a"> <label onclick="disconnect(8)">9</label> </button>
+                                <button id="n_a"> <label onclick="disconnect(9)">10</label> </button>
+                                <button id="v_w"> <label onclick="disconnect(10)">11</label> </button>
+                                <button id="l_w"> <label onclick="disconnect(11)">12</label> </button>
+                                <button id="m_w"> <label onclick="disconnect(12)">13</label> </button>
+                                <button id="c_w"> <label onclick="disconnect(13)">14</label> </button>
+
+
+
+
+                                <!-- <button id="var_on"> </button> -->
+
+                                <button id="transformer_a"> <label onclick="disconnect(14)">15</label> </button>
+                                <button id="transformer_b"> <label onclick="disconnect(15)">16</label> </button>
+                                <button id="transformer_c"> <label onclick="disconnect(16)">17</label> </button>
+                                <button id="transformer_d"> <label onclick="disconnect(17)">18</label> </button>
+
+                                <button id="lamp_load_a"> <label onclick="disconnect(18)">19</label> </button>
+                                <button id="lamp_load_b"> <label onclick="disconnect(19)">20</label> </button>
+
+
+                                <!--   Button nodes for the Output instruments (Voltmeter)   -->
+
+                                <button id="output_p_v"> <label onclick="disconnect(20)">21</label> </button>
+                                <button id="output_n_v"> <label onclick="disconnect(21)">22</label> </button>
+
+                                <!--  Button nodes for the Output Ammeter -->
+
+                                <button id="output_p_a"> <label onclick="disconnect(22)">23</label> </button>
+                                <button id="output_n_a"> <label onclick="disconnect(23)">24</label> </button>
+
+
+
+                                <!--   Button nodes for the watttmeter V,L,M,C   -->
+
+                                <!--  <button id="output_p_b_a">  <label onclick="disconnect(22)"> 27 </label> </button>    -->
+
+                                <button id="output_v_var"> <label onclick="disconnect(24)">25</label> </button>
+                                <button id="output_l_var"> <label onclick="disconnect(25)">26</label> </button>
+                                <button id="output_m_var"> <label onclick="disconnect(26)">27</label> </button>
+                                <button id="output_c_var"> <label onclick="disconnect(27)">28</label> </button>
+
+                                <!--  <button id="p_l"></button> -->
+                                <!--  <button id="n_l"></button>  -->
+                                <!--  <button id = "starter_l" disabled="true"></button>
+                                <button id = "starter_r" disabled="true"></button>
+                                <button id = "choke_l" disabled="true"></button>
+                                <button id = "choke_r" disabled="true"></button>  -->
+
+                            </div>
+
+                        </div>
+                        <!--     <div>
+                            <input type="range" min="0" max="230" id="variacSlider" value="0" disabled="true">
+                        </div>  -->
+                        <!--  <div id="voltmeter_v1">Voltmeter</div> -->
+                        <!--  <div id="ammeter_a1"> Ammeter</div>  -->
+
+
+
+                        <div id="wattmeter_w2">Wattmeter1</div>
+                        <div id="wattmeter_w1">Wattmeter2</div>
+                        <div id="switch1"> <b> Switch1 </b></div>
+                        <div id="switch2"> <b> Switch2 </b></div>
+                        <div id="switch3"> <b> Switch3 </b></div>
+
+
+                        <!--  <div id="voltmeter_v2">Voltmeter</div>-->
+                        <!--  <div id="ammeter_a2"> Ammeter</div> -->
+
+                        <div id="wattmeter_w2">Wattmeter</div>
+
+                        <img class="forbidden" src="../Assets/V2.png" id="V1" height="180" width="180" alt="">
+                        <img class="forbidden" src="../Assets/Pointer.png" height="11" width="44" id="output_P_V"
+                            alt="">
+
+                        <img class="forbidden" src="../Assets/A2.png" id="A1" height="180" width="180" alt="">
+                        <img class="forbidden" src="../Assets/Pointer.png" height="11" width="44" id="output_P_A"
+                            alt="">
+
+                        <img class="forbidden" src="../Assets/wattmeter.png" id="W1" height="220" width="220" alt="">
+                        <img class="forbidden" src="../Assets/Pointer.png" height="15" width="60" id="output_P_W"
+                            alt="">
+
+                        <img class="forbidden" src="../Assets/transformer.png" id="transformer_image" height="210"
+                            width="210" alt="">
+
+                    </div>
+
+                </div>
+                <div class="circuit_buttons"></div>
+                <div class="slider_values"></div>
+
+
+                <!--   First image of the off switch  -->
+                <p>
+                    <img src="../Assets/Switch_Off.png" id="Switch1" alt=""
+                        style="position:absolute; left:620px; margin-top:-620px; margin-left: 570px; height: 200px; width: 100px" />
+                </p>
+
+                <!--  Second image of the off switch -->
+                <p>
+                    <img src="../Assets/Switch_Off.png" id="Switch2" alt=""
+                        style="position:absolute;left: 610px;margin-top:-620px; margin-left: 640px; height: 200px; width: 100px" />
+                </p>
+
+                <!-- Third image of the off switch  -->
+
+                <p>
+                    <img src="../Assets/Switch_Off.png" id="Switch3" alt=""
+                        style="position:absolute;left: 600px;margin-top:-620px; margin-left: 710px; height: 200px; width: 100px" />
+                </p>
+
+
+                <!--Row 2 Col 2-->
+
+            </div>
+
+        </div>
+
+        <div class="clear"> </div>
+
+        <div class="r3">
+
+            <div class="calculation">
+
+                <p>Graph</p>
+
+                <div class="chart-container" id="chart-container" >
+                    <canvas id="myPlot" class="MyCanvas" height="100px">
+    
+                    </canvas>
+                </div>
+
+                <!-- <img class="forbidden" src="../Assets/Power Factor of Devices.png" width = "700"alt="">
+                <input type="text" id="DeviceC1">
+                <input type="text" id="VariacValC">
+                <input type="text" id="AmmeterC">
+                <input type="text" id="VoltmeterC">
+                <input type="text" id="WattmeterC">
+                <input type="text" id="numerator">
+                <input type="text" id="denominator1">
+                <input type="text" id="denominator2">
+                <input type="text" id="equalto">
+                <input type="text" id="DeviceC2">
+                <input type="text" id="powerfactor">   -->
+
+            </div>
+
+        </div>
+
+        <!-- <div class="calc_output"> </div>  -->
+    </div>
+
+    <footer>
+
+        <p> &#169; Copyright 2022 Virtual Labs, IIT Roorkee </p>
+
+    </footer>
+
+
+</body>
+
+<script src="../Function/function.js">  </script>
+
+
+</html>

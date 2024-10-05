@@ -1,0 +1,926 @@
+/*BASE STYLING GOES HERE*/
+body {
+    background-image: linear-gradient(#eaeaea, #d6d6d6);
+    background-repeat: no-repeat;
+}
+
+.clear {
+    float: none;
+}
+
+.container {
+
+    background-color: #606471;
+    width: 1500px;
+    height: 1370px;
+    overflow: hidden;
+    margin: 0 8px;
+    border-radius: 10px;
+}
+
+.heading {
+    height: 120px;
+    width: 1400px;
+    margin: 0 30px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+    background-color: #eaeaea;
+    border-radius: 10px;
+
+}
+
+.r2 {
+    float: left;
+
+    width: 1500px;
+    margin: 00px 30px;
+    border-radius: 10px;
+
+}
+
+.r2c1 {
+    float: left;
+
+    width: 500px;
+    height: 300px;
+
+
+    border-radius: 10px;
+
+}
+
+.action-buttons {
+    background-color: #eaeaea;
+    width: 500px;
+    height: 100px;
+
+
+    border-radius: 10px;
+
+}
+
+.sliders {
+    display: block;
+    background-color: #eaeaea;
+    width: 500px;
+    height: 195px;
+    border-radius: 10px;
+    margin: 0 auto;
+
+    font-size: 13px;
+}
+
+.r2c2 {
+
+    float: left;
+    background-color: rgb(35, 35, 35);
+    width: 870px;
+    height: 600px;
+    border-radius: 10px;
+    margin: 20px 30px;
+
+}
+
+.r3 {
+    float: left;
+
+    width: 1500px;
+    margin: 0px 30px;
+    border-radius: 10px;
+
+
+}
+
+.r2c1 .o_table {
+    float: left;
+
+    width: 500px;
+    height: 250px;
+    background-color: #eaeaea;
+    margin-top: 30px;
+    border-radius: 10px;
+
+}
+
+
+.r2c1 .o_table p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.r3c1 {
+    float: left;
+    background-color: white;
+    width: 1400px;
+    height: 550px;
+    border-radius: 10px;
+}
+
+/*Text Edits Default*/
+.heading p {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Zacbel X', sans-serif;
+    color: rgb(31, 31, 31);
+}
+
+.action-buttons p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color: rgb(31, 31, 31);
+}
+
+.sliders p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color: rgb(31, 31, 31);
+}
+
+.o_table p {
+
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color: rgb(31, 31, 31);
+}
+
+.circuit p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color: #eaeaea;
+}
+
+.graph p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color: rgb(31, 31, 31);
+}
+
+
+/*Buttons CSS*/
+.action-buttons {
+    border: none;
+
+}
+
+.control-panel-buttons {
+    display: block;
+
+    height: 40px;
+    width: 500px;
+    background-color: #eaeaea;
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+.control-panel-buttons button {
+    border: none;
+    height: 35px;
+    outline: none;
+    background-color: rgba(129, 129, 129, 0.313);
+
+    margin: 0px 10px;
+    border-radius: 10px;
+
+
+    text-align: center;
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 20px;
+    transition: all 0.25s ease-in, border 0.001s ease-in-out;
+    cursor: pointer;
+}
+
+.control-panel-buttons button:hover {
+    background-color: #1e1e1ee8;
+    color: rgb(238, 234, 234);
+
+}
+
+.control-panel-buttons button:active {
+    background-color: #606471;
+    color: rgb(238, 234, 234);
+    border: 3px solid #6a6b6e;
+}
+
+/*Table Css*/
+.o_table {
+
+
+
+    border-radius: 10px;
+    width: 500px;
+    height: 380px;
+
+
+
+}
+
+.o_table table {
+    width: 500px;
+    text-align: center;
+    padding: 2px;
+
+}
+
+.o_table td {
+    border-radius: 0px;
+    border: 1px solid #1e1e1e;
+}
+
+.o_table th {
+    border-radius: 10px;
+    border: 2px solid #1e1e1e;
+}
+
+/*Assets Placement*/
+.c-diag div {
+    float: left;
+    width: 170px;
+    height: 200px;
+
+}
+
+.voltmeter {
+    margin-left: -30px;
+}
+
+.ammeter-vertical {
+    margin-left: 20px;
+}
+
+.ammeter-vertical div {
+    height: 180px;
+}
+
+.circuit button {
+    position: relative;
+    outline: none;
+    border: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 8px;
+    background-color: #53e42b;
+
+    cursor: pointer;
+
+}
+
+.mcb {
+    position: relative;
+
+    left: 30px;
+    top: 10px;
+}
+
+#mcb_switch {
+    position: relative;
+    width: 65px;
+
+    bottom: 22px;
+    right: 84px;
+    opacity: 0;
+}
+
+#mcb_p,
+#mcb_n {
+    position: relative;
+
+    bottom: 26px;
+    left: 23px;
+    margin-left: 10px;
+}
+
+
+#Mp_v,
+#Mp_a {
+    bottom: 72px;
+    left: 6px;
+}
+
+#Mn_a,
+#Mn_v {
+    bottom: 72px;
+    left: 42px;
+}
+
+#Tp_a {
+    bottom: 72px;
+    left: 6px;
+}
+
+#Tn_a {
+    bottom: 72px;
+    left: 42px;
+}
+
+#Sp_a {
+    bottom: 72px;
+    left: 6px;
+}
+
+#Sn_a {
+    bottom: 72px;
+    left: 42px;
+}
+
+#Bp_a {
+    bottom: 72px;
+    left: 6px;
+}
+
+#Bn_a {
+    bottom: 72px;
+    left: 42px;
+}
+
+#w_v,
+#w_l,
+#w_m,
+#w_c {
+    margin-left: 16px;
+    position: relative;
+    bottom: 80px;
+    right: 1px;
+}
+
+#w_v {
+    margin-left: -12px;
+
+}
+
+
+#TP_A {
+    position: relative;
+    bottom: 110px;
+    left: 49px;
+
+    transform-origin: 85% 50%;
+}
+
+#SP_A {
+    position: relative;
+    bottom: 110px;
+    left: 49px;
+
+    transform-origin: 85% 50%;
+}
+
+#BP_A {
+    position: relative;
+    bottom: 110px;
+    left: 49px;
+
+    transform-origin: 85% 50%;
+}
+
+
+
+#P_A,
+#P_V {
+    position: relative;
+    bottom: 110px;
+    left: 49px;
+
+    transform-origin: 85% 50%;
+}
+
+#P_W {
+    position: relative;
+    bottom: 124.1px;
+    left: 82px;
+
+    transform-origin: 85% 50%;
+    transform: rotate(0deg);
+}
+
+.rheostat {
+    position: relative;
+    top: -70px;
+    left: 350px;
+}
+
+#rheostat {
+    z-index: 2;
+}
+
+#rh-range {
+    z-index: 1;
+    position: relative;
+    appearance: none;
+    height: 5px;
+    width: 193px;
+
+    background-color: rgb(185, 185, 185);
+    border-right: 11.5px solid rgb(185, 185, 185);
+    border-left: 12px solid rgb(185, 185, 185);
+    border-radius: 0px;
+
+
+    top: 130px;
+    left: 41px;
+}
+
+#rh_p,
+#rh_n {
+    bottom: 166px;
+    left: 20px;
+}
+
+#rh_n {
+    left: 255px;
+}
+
+#rh-range::-webkit-slider-thumb {
+
+    position: relative;
+    top: 10px;
+    appearance: none;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 30px solid rgb(254, 12, 12);
+
+    cursor: grab;
+
+
+
+}
+
+#rh-range::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
+
+#rh-range:disabled {
+    z-index: +2;
+    background-color: #808080;
+    cursor: default;
+
+}
+
+.inductor {
+    position: relative;
+    left: 485px;
+    top: -60px;
+}
+
+#i_p,
+#i_n {
+    position: relative;
+    bottom: 40px;
+    left: 74px;
+    margin-left: 10px;
+
+}
+
+.capacitor {
+    position: relative;
+    left: 310px;
+    top: -290px;
+}
+
+#c_p,
+#c_n {
+    position: relative;
+    bottom: 95px;
+    left: 46px;
+    margin-left: 22px;
+
+}
+
+#c_n {
+    bottom: 85px;
+}
+
+
+
+.transformer {
+    position: relative;
+
+    left: -165px;
+}
+
+.transformer button {
+    top: 60px;
+    left: 97px;
+    margin-left: 14px;
+}
+
+#t_b {
+    left: 101px;
+}
+
+#t_c {
+    left: 95px;
+}
+
+
+.circuit-diagram {
+    margin-left: 70px;
+    margin-top: -20px;
+}
+
+/* using as a reference to a output box#Rl_DISPLAY{
+
+   position: relative;
+
+
+   bottom:175px;
+   left:395px;
+
+
+   width:60px;
+   height:30px;
+   border:none;
+   outline:none;
+   border-radius: 10px;
+
+
+    background-color: #ededed;
+
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Foco Trial', sans-serif;
+
+}
+
+*/
+.sliders label {
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    position: relative;
+    right: 420px;
+    bottom: 2px;
+
+}
+
+.sliders input {
+    -webkit-appearance: none;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+
+    margin: 10px 70px;
+}
+
+.sliders input::-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: #d0d0d0;
+    transition: background-color 0.2s ease-in;
+}
+
+.sliders input::-webkit-slider-thumb:hover {
+    cursor: grab;
+    background-color: #ffffff;
+}
+
+.sliders input::-webkit-slider-thumb:active {
+    cursor: grabbing;
+
+}
+
+.sliders input:disabled {
+    background-color: grey;
+    cursor: default;
+}
+
+.sliders input::-webkit-slider-thumb:disabled {
+    background-color: grey;
+    cursor: default;
+}
+
+.sliders input:disabled::-webkit-slider-thumb {
+    background-color: #d0d0d0;
+    cursor: default;
+}
+
+
+
+
+
+.instructions {
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    z-index: +2;
+    filter: drop-shadow(2px 2px 8px rgba(56, 53, 53, 0.315));
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 19px;
+    padding-top: -20px;
+    overflow: visible;
+
+    transition: all 0.2s ease-in-out;
+
+    position: absolute;
+    top: 40px;
+    left: -300px;
+
+    height: 650px;
+    width: 300px;
+}
+
+.instructions:hover {
+    left: 0px;
+}
+
+.insHeading {
+
+    background-color: #afaeae;
+    border-radius: 8px;
+    margin-right: 0px;
+    margin-left: 10px;
+    text-align: center;
+    margin-top: -10px;
+    font-size: 30px;
+
+    height: 40px;
+    width: 90%;
+}
+
+.steps {
+    margin-top: -20px;
+    margin-left: 0px;
+    margin-right: -5px;
+    text-align: left;
+    padding-top: 0px;
+    border-radius: 10px;
+    font-size: 19px;
+
+    height: 550px;
+    overflow: auto;
+}
+
+.MyLabel {
+    background-color: #111111;
+    color: #e8e8e8;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 0px 10px 10px 0px;
+
+    height: 120px;
+    width: 50px;
+
+    position: absolute;
+    top: 10px;
+    left: 300px;
+}
+
+.SeeOnly:hover {
+    cursor: default;
+}
+
+.SeeOnly:focus {
+    cursor: default;
+    outline: none;
+}
+
+.c-diag label {
+    text-align: center;
+    font-family: 'Zacbel X', sans-serif;
+    overflow: visible;
+    position: absolute;
+
+
+    font-size: 12px;
+
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 2px;
+    transform: translate(-7px, 13px);
+
+
+
+
+}
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    height: 500px;
+    width: 1000px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.forbidden {
+    pointer-events: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+
+/*Last minute changes--Variac__*/
+#transformer{
+    position: relative;
+    right:100px;
+    top:-20px;
+}
+#t_on{
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+
+}
+
+#t_a{
+    position: relative;
+    top:169px;
+    left:220.5px;
+
+
+}
+#t_b{
+    position: relative;
+    top:169px;
+    left:250.5px;
+
+
+}
+#t_c{
+    position: relative;
+    top:232px;
+    left:160px;
+
+
+}
+#t_d{
+    position: relative;
+    top:232px;
+    left:190px;
+
+
+}
+#t_on{
+    position: relative;
+    top:214px;
+    left:128px;
+    opacity: 0;
+}
+
+#knob{
+    position: relative;
+top:-323px;
+left:73px;
+
+}
+
+
+
+.transformer button{
+    z-index: +1;
+}
+
+.jtk-endpoint { z-index:1; }
+
+.transformer #t_a label,#t_b label{
+transform: translate(-5px, -28px);}
+.control-panel-buttons button:disabled:hover {
+    background-color: rgba(129, 129, 129, 0.313);
+   color: #919191;
+   cursor: default;
+}
+
+.control-panel-buttons button:disabled:active {
+   background-color: rgba(129, 129, 129, 0.313);
+   color: #919191;
+   border: none;
+   cursor: default;
+}
+.sliders input:disabled:-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: #d0d0d0;
+    transition: background-color 0.2s ease-in;
+}
+
+.sliders input:disabled::-webkit-slider-thumb:hover {
+    cursor: default;
+    background-color: #d0d0d0
+}
+
+.sliders input:disabled::-webkit-slider-thumb:active {
+    cursor: default;
+
+}
+
+
+#calcImage{
+    width: 600px;
+    height: 275px;
+}
+
+#R{
+    position: relative;
+    top:-240px;
+    left: -510px;
+    width: 50px;
+}
+
+#XL{
+    position: relative;
+    top:-213px;
+    left: 95px;
+    width: 50px;
+}
+
+#XC{
+    position: relative;
+    top:-180px;
+    left: 95px;
+    width: 50px;
+}
+
+#L{
+    position: relative;
+    top:-150px;
+    left: 95px;
+    width: 50px;
+}
+
+#C{
+    position: relative;
+    top:-120px;
+    left: 95px;
+    width: 50px;
+}
+#Z{
+    position: relative;
+    top:-342px;
+    left: 290px;
+    width: 50px;
+}
+#cos{
+    position: relative;
+    top:-312px;
+    left: 330px;
+    width: 50px;
+}
+#P{
+    position: relative;
+    top:-278px;
+    left: 290px;
+    width: 50px;
+}
+#Q{
+    position: relative;
+    top:-255px;
+    left: 290px;
+    width: 50px;
+}
+
+#verify {
+    border: none;
+    height: 35px;
+    outline: none;
+    background-color: rgba(129, 129, 129, 0.313);
+
+    margin: 0px 10px;
+    border-radius: 10px;
+
+
+    text-align: center;
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 20px;
+    transition: all 0.25s ease-in, border 0.001s ease-in-out;
+    cursor: pointer;
+}
+
+#verify:hover {
+    background-color: #1e1e1ee8;
+    color: rgb(238, 234, 234);
+
+}
+
+#verify:active {
+    background-color: #606471;
+    color: rgb(238, 234, 234);
+    border: 3px solid #6a6b6e;
+}

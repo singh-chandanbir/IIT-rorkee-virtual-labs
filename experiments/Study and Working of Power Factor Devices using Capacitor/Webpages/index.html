@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXPERIMENT</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link href="../CDN_folder/Font(zacbel-x).css" rel="stylesheet">
+    <link href="../CDN_folder/Font(foco-trial).css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@firestitch/jsplumb@2.12.0/dist/js/jsplumb.min.js"></script>
+
+</head>
+
+<body id="body">
+    <div class="container">
+
+        <!--ROW1-->
+        <div class="heading">
+            <!--Heading goes here-->
+            <p>Study and Working of Power Factor of Devices using Capacitor</p>
+        </div>
+
+        <div class="instructions" id="instTab">
+            <div class="insHeading">
+                <p>Instructions</p>
+
+                <ul class="steps">
+                    <li>!!! Click in the label to delete all connections for the corrusponding node.</li>
+                    <li id="s1">Choose a load by clicking on the 'LOAD' button.</li>
+                    <li id="s2">Make connections by dragging the nodes.</li>
+                    <ul>
+                        <li>Connect input of variac to MCB. 1->11, 2->12 (blue nodes should be connected to blue and red
+                            nodes to red)</li>
+                        <li>Connect output of variac to the voltmeter. 3->13, 4->14 </li>
+                        <li>Connect fuse and switch to each other, in series. 16->17, 18->5 </li>
+                        <li>Then connect positive (output) of variac to fuse-switch arrangement and extend its
+                            connection to positive of voltmeter. 13->15</li>
+                        <li>Connect negative of ammeter, to M and C of the wattmeter. 9->10, 6->9</li>
+                        <li>Connect V of wattmeter to positive of load, and L to negative of load. 8->19, 7->20</li>
+                        <li>Finally connect 14->7. </li>
+                    </ul>
+                    <li id="s3">Check your connections by clicking on the 'CHECK' button.</li>
+                    <li id="s4">Turn on the MCB and adjust the value of output voltage on variac, until the voltage is
+                        230V.</li>
+                    <li id="s5">Click the 'ADD' button to add the values to the observation table.</li>
+                    <li id="s6">Click the 'CALCULATE' button to calculate the powerfactor of the load. </li>
+                    <li id="s7">Change the load and repeat the above process, to get powerfactor of all the other loads.
+                    </li>
+                </ul>
+            </div>
+            <div class="MyLabel">
+                <p>
+                    Instructions
+                </p>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!--ROW2-->
+        <div class="r2">
+
+            <div class="r2c1">
+
+
+                <div class="action-buttons">
+                    <p>ACTION BUTTONS</p>
+                    <div class="control-panel-buttons">
+                        <button id="check" disabled="true">CHECK</button>
+                        <button id="add" disabled="true">ADD</button>
+                        <button id="calculate" disabled="true">CALCULATE</button>
+                        <button id="reset">RESET</button>
+                        <button id="print" disabled="true" onclick=' window.print();' disabled="true">PRINT</button>
+                        <!--THIS IS TO BE KEPT IN A FLEX BOX-->
+                    </div>
+                </div>
+                <!--Row 2 Col 1 Row1-->
+
+                <div class="formulas">
+                    <p>FORMULAS</p>
+                    <formula-text>
+                        \[PowerFactor = \frac{True Power}{Apparent Power}\]
+                        \[PowerFactor = \cos\phi\]
+                        \[\phi = Phase Angle\]
+                        <!-- Power Factor <BR> = True Power/Apparent Power
+                        <BR>
+                        = cos(Phase angle) -->
+                    </formula-text>
+
+                </div>
+
+                <!--Row 2 Col 1 Row2-->
+                <div class="o_table">
+                    <p>OBSERVATION TABLE</p>
+                    <div class="table">
+                        <!--TABLE TO BE DISPLAYED HERE-->
+                        <table id="valTable">
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Volts</th>
+                                <th>Amps</th>
+                                <th>Watts</th>
+                                <th>Power Factor</th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <!--Row 3 Col 1 -->
+
+
+
+            </div>
+
+
+            <div class="r2c2">
+
+                <div class="circuit">
+                    <p>EXPERIMENT</p>
+                    <div class="c-diag">
+                        <img class="forbidden" src="../Assets/MCB_Off.png" id="MCB" height="120" width="100" alt="">
+
+                        <img class="forbidden" src="../Assets/V1.png" id="V" height="180" width="180" alt="">
+                        <img class="forbidden" src="../Assets/Pointer.png" height="11" width="44" id="P_V" alt="">
+
+                        <img class="forbidden" src="../Assets/A1.png" id="A" height="180" width="180" alt="">
+                        <img class="forbidden" src="../Assets/Pointer.png" height="11" width="44" id="P_A" alt="">
+
+                        <img class="forbidden" src="../Assets/wattmeter.png" id="W" height="220" width="220" alt="">
+                        <img class="forbidden" src="../Assets/Pointer.png" height="15" width="60" id="P_W" alt="">
+
+                        <img src="../Assets/Variac_Knob.png" id="Var_Knob" height="100" width="100" alt="">
+                        <img class="forbidden" src="../Assets/Variac_OFF.png" id="Var" height="400" width="410" alt="">
+
+
+                        <img class="forbidden" src="../Assets/Fuse_normal.png" id="fuse" height="60" width="120" alt="">
+                        <img src="../Assets/Switch_Off.png" id="switch" height="200" width="150" alt="">
+
+
+
+                        <div class="loads" id="loadContain">
+                            <input type="button" id="up" value="Change Load">
+                            <img class="forbidden" src="../Assets/Loads/NoLoad.png" id="loadImg" height="150"
+                                width="300" alt="">
+
+
+                        </div>
+
+
+                        <div class="nodes">
+
+                            <div class="positive">
+                                <button id="p_mcb"><label onclick="disconnect(0)">1</label></button>
+                                <button id="n_mcb"><label onclick="disconnect(1)">2</label></button>
+
+                                <button id="on_mcb"></button>
+                                <button id="p_fuse"><label onclick="disconnect(14)">15</label></button>
+                                <button id="n_fuse"><label onclick="disconnect(15)">16</label></button>
+                                <button id="p_switch"><label id="label17" onclick="disconnect(16)">17</label></button>
+                                <button id="n_switch"><label id="label18" onclick="disconnect(17)">18</label></button>
+                                <button id="p_v"><label onclick="disconnect(2)">3</label></button>
+                                <button id="n_v"><label onclick="disconnect(3)">4</label></button>
+                                <button id="p_a"><label onclick="disconnect(4)">5</label></button>
+                                <button id="n_a"><label onclick="disconnect(5)">6</label></button>
+                                <button id="v_w"><label onclick="disconnect(6)">7</label></button>
+                                <button id="l_w"><label onclick="disconnect(7)">8</label></button>
+                                <button id="m_w"><label onclick="disconnect(8)">9</label></button>
+                                <button id="c_w"><label onclick="disconnect(9)">10</label></button>
+                                <button id="a_var"><label id="label11" onclick="disconnect(10)">11</label></button>
+                                <button id="b_var"><label id="label12" onclick="disconnect(11)">12</label></button>
+                                <button id="c_var"><label onclick="disconnect(12)">13</label></button>
+                                <button id="d_var"><label onclick="disconnect(13)">14</label></button>
+                                <button id="var_on"></button>
+                                <button id="p_l"><label id="label19" onclick="disconnect(18)">19</label></button>
+                                <button id="n_l"><label id="label20" onclick="disconnect(19)">20</label></button>
+
+
+                                <button id="starter_l" disabled="true"></button>
+                                <button id="starter_r" disabled="true"></button>
+                                <button id="choke_l" disabled="true"></button>
+                                <button id="choke_r" disabled="true"></button>
+
+                                <div class="tubelight-labels">
+                                    <label onclick="disconnect(20)" id="label21">21</label>
+                                    <label onclick="disconnect(21)" id="label22">22</label>
+                                    <label onclick="disconnect(22)" id="label23">23</label>
+                                    <label onclick="disconnect(23)" id="label24">24</label>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+                <div class="circuit_buttons"></div>
+                <div class="slider_values"></div>
+                <!--Row 2 Col 2-->
+
+
+            </div>
+
+        </div>
+
+        <div class="clear"></div>
+
+
+        <div class="r3">
+            <div class="calculation">
+                <p>CALCULATIONS</p>
+
+                <img class="forbidden" src="../Assets/Power Factor of Devices.png" width="700" alt="">
+                <input class="SeeOnly" readonly type="text" id="DeviceC1">
+                <input class="SeeOnly" readonly type="text" id="VariacValC">
+                <input class="SeeOnly" readonly type="text" id="AmmeterC">
+                <input class="SeeOnly" readonly type="text" id="VoltmeterC">
+                <input class="SeeOnly" readonly type="text" id="WattmeterC">
+                <input class="SeeOnly" readonly type="text" id="numerator">
+                <input class="SeeOnly" readonly type="text" id="denominator1">
+                <input class="SeeOnly" readonly type="text" id="denominator2">
+                <input class="SeeOnly" readonly type="text" id="equalto">
+                <input class="SeeOnly" readonly type="text" id="DeviceC2">
+                <input type="text" id="powerfactor">
+                <button onclick="verify_inputs()" id="VRF">Verify</button>
+
+            </div>
+            <div class="calc_output"></div>
+
+        </div>
+
+    </div>
+
+</body>
+<script src="../Function/function.js"></script>
+<!-- latex cdn -->
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/startup.js"></script> -->
+<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML"></script>
+
+
+</html>

@@ -1,0 +1,1266 @@
+/*BASE STYLING GOES HERE*/
+
+body{
+
+    background-image: linear-gradient(#eaeaea,#d6d6d6);
+    background-repeat: no-repeat;
+
+}
+
+.clear{
+
+    float:none;
+}
+
+.container{
+
+    background-color: #606471;
+    width: 1500px;
+    /* height: 1300px; */
+    height:auto;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 10px;
+}
+
+.heading{
+
+    height:60px;
+    width:1400px;
+    margin: 0 30px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    background-color: #eaeaea;
+    border-radius: 10px;
+
+}
+
+#wattmeter_one {
+
+   position: absolute;
+   margin-top: 82px;
+   margin-left: 739px;
+   font-size: 27px;
+   color: white;
+   z-index: +2;
+
+}
+
+#wattmeter_two {
+
+    position: absolute;
+    margin-top: 660px;
+    margin-left: 545px;
+    font-size: 27px;
+    color: white;
+    z-index: +2;
+
+}
+
+#mcb_1 {
+
+  position: absolute;
+  margin-top:-15px;
+  margin-left:20px;
+  font-size: 28px;
+  color: white;
+
+}
+
+#variac_1 {
+
+position: absolute;
+margin-top: 420px;
+margin-left:110px;
+font-size: 28px;
+color: white;
+
+}
+
+#switch1  {
+
+position: absolute;
+margin-left: 640px;
+margin-top: -40px;
+font-size: 18px;
+color: white;
+
+}
+
+#switch2 {
+
+position: absolute;
+margin-left: 710px;
+margin-top: -40px;
+font-size: 18px;
+color: white;
+
+
+}
+
+#switch3{
+
+position: absolute;
+margin-left: 780px;
+margin-top: -40px;
+font-size: 18px;
+color: white;
+
+}
+
+#transformer_1 {
+
+position: absolute;
+margin-top: 480px;
+margin-left: 335px;
+font-size: 28px;
+color: white;
+
+}
+
+#voltmeter_v1 {
+
+    position: absolute;
+    margin-top: -85px;
+    margin-left: 130px;
+    color: white;
+    font-size: 28px;
+}
+
+#ammeter_a1 {
+
+    position: absolute;
+    margin-top: -85px;
+    margin-left: 540px;
+    color: white;
+    font-size: 28px;
+}
+
+#wattmeter_w1 {
+
+position: absolute;
+margin-top: -110px;
+margin-left:480px;
+color: white;
+font-size: 28px;
+}
+
+#transformer_a {
+
+position:absolute;
+margin-top:5px;
+margin-left: -200px;
+height:5px;
+width:5px;
+
+}
+
+#transformer_b {
+
+position: absolute;
+margin-top: 5px;
+margin-left: -160px;
+height:5px;
+width:5px;
+
+}
+
+#transformer_c {
+
+position: absolute;
+margin-top:5px;
+margin-left: -80px;
+height:5px;
+width:5px;
+
+}
+
+#transformer_d {
+
+position:absolute;
+margin-top: 5px;
+margin-left: -40px;
+height:5px;
+width:5px;
+
+}
+
+#lamp_load_a {
+
+position: absolute;
+margin-top: 50px;
+margin-left: 90px;
+height:5px;
+width:5px;
+
+}
+
+#lamp_load_b {
+
+    position: absolute;
+    margin-top:50px;
+    margin-left:260px;
+
+    height:5px;
+    width:5px;
+}
+
+/*  2nd text for Voltmeter, Wattmeter and Ammeter  */
+
+#voltmeter_v2 {
+
+    position: absolute;
+    margin-top: -675px;
+    margin-left: 270px;
+    color: white;
+    font-size: 28px;
+}
+
+#ammeter_a2 {
+
+    position: absolute;
+    margin-top: -675px;
+    margin-left: 485px;
+    color: white;
+    font-size: 28px;
+}
+
+#wattmeter_w2 {
+
+position: absolute;
+margin-top: -685px;
+margin-left:670px ;
+color: white;
+font-size: 28px;
+}
+
+.r2{
+    float:left;
+    width: 1500px;
+    margin: 00px 30px;
+    border-radius: 10px;
+
+}
+
+.r2c1{
+    float:left;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+
+}
+.action-buttons {
+    background-color: #eaeaea;
+    width: 500px;
+    height: 100px;
+    border-radius: 10px;
+
+}
+.formulas {
+
+    display: block;
+    background-color: #eaeaea;
+    width: 500px;
+    height: 195px;
+    border-radius: 10px;
+    margin:0 auto;
+
+}
+
+.r2c2{
+
+    float:left;
+    background-color: rgb(35, 35, 35);
+    width: 920px;
+    height: 820px;
+    border-radius: 10px;
+    margin: 20px 30px;
+
+}
+.r3{
+    float:left;
+    width: 1450px;
+    height: 720px;
+    margin: 30px 30px 30px 30px;
+    border-radius: 10px;
+    background-color: white;
+    color: #111111;
+
+}
+.r2c1 .o_table{
+    float:left;
+    width: 500px;
+    height: 250px;
+    background-color: #eaeaea;
+    margin-top: 30px;
+    border-radius: 10px;
+
+}
+
+
+.r2c1 .o_table p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.r3c2{
+    float:left;
+    background-color: rgb(35, 35, 35);
+    width: 870px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 0px 30px;
+
+}
+
+/*Text Edits Default*/
+.heading p{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Zacbel X', sans-serif;
+    color:rgb(31, 31, 31);
+}
+.action-buttons p{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color:rgb(31, 31, 31);
+}
+.formulas {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color:rgb(31, 31, 31);
+}
+.o_table p{
+
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color:rgb(31, 31, 31);
+}
+
+.circuit p {
+    margin-top: 3px ;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color: #eaeaea;
+}
+
+.calculation p{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Zacbel X', sans-serif;
+    color: #111111;
+}
+
+
+/*Buttons CSS*/
+.action-buttons {
+    border: none;
+
+}
+
+.control-panel-buttons {
+    display: inline-flex;
+    height: 40px;
+    width: 500px;
+    background-color: #eaeaea;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.control-panel-buttons button {
+    border: none;
+    height: 35px;
+    outline: none;
+    background-color: rgba(129, 129, 129, 0.313);
+    margin: 0px 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 20px;
+    transition: all 0.25s ease-in, border 0.001s ease-in-out;
+    cursor: pointer;
+}
+
+.control-panel-buttons button:hover {
+    background-color: #1e1e1ee8;
+    color: rgb(238, 234, 234);
+
+}
+
+.control-panel-buttons button:active {
+    background-color: #606471;
+    color: rgb(238, 234, 234);
+    border: 3px solid #6a6b6e;
+}
+/*Table Css*/
+.o_table {
+    border-radius: 10px;
+    width: 500px;
+    height: 380px;
+
+}
+
+.o_table table {
+    width: 500px;
+    text-align: center;
+    padding: 2px;
+}
+
+.o_table td {
+    border-radius: 0px;
+    border: 1px solid #1e1e1e;
+}
+
+.o_table th {
+    border-radius: 10px;
+    border: 2px solid #1e1e1e;
+}
+
+
+/*Assets Placement*/
+/* #W{
+    position: relative;
+    right:2px;
+    top:130px;
+}
+#P_W{
+    position:relative;
+    right:142px;
+    top:26.5px;
+    transform-origin: 81.9%;
+    transform:rotate(0deg);
+
+
+}
+#A{
+    position: relative;
+    right:100px;
+    bottom:35px;
+}
+#P_A{
+    position: relative;
+    right:235.5px;
+    bottom:127px;
+    transform-origin: 81.9%;
+    transform:rotate(90deg);
+
+
+}
+#fuse{
+    position: relative;
+    right:120px;
+    bottom:100px;
+}
+#Var{
+    position: relative;
+    left:550px;
+    bottom:130px;
+    z-index: 0;
+}
+#Var_Knob{
+    position:relative;
+    z-index: +1;
+    left:96px;
+    top:110px;
+    transform:rotate(0deg);
+
+}
+#MCB{
+    position:relative;
+    bottom:480px;
+    left:255px;
+}
+#V{
+    position: relative;
+    right:320px;
+    bottom:140px;
+}
+#P_V{
+    position: relative;
+    right:455px;
+    bottom:233px;
+
+}
+#switch{
+    position: relative;
+    left:470px;
+    bottom:670px;
+
+
+} */
+
+/*Assets Placement New*/
+#MCB{
+    position: relative;
+    bottom:90px;
+}
+#V{
+    position: relative;
+    bottom:50px;
+    left:135px;
+}
+#V1 {
+    position:relative;
+    bottom:70px;
+    left:-275px;
+}
+
+#output_P_V{
+    position:relative;
+    bottom:163px;
+    transform-origin:81.9%;
+    transform: rotate(0deg);
+    left: -405px;
+
+}
+
+#P_V{
+    position:relative;
+    bottom:143px;
+    transform-origin:81.9%;
+    transform: rotate(0deg);
+}
+#A{
+    position: relative;
+    bottom:50px;
+    left:115px;
+}
+
+#A1 {
+
+    position: relative;
+    bottom:70px;
+    left: -300px;
+}
+
+#P_A{
+    position:relative;
+    bottom:143px;
+    right:15px;
+    transform-origin:81.9%;
+    transform: rotate(0deg);
+}
+
+#output_P_A{
+    position:relative;
+    bottom:163px;
+    right:430px;
+    transform-origin:81.9%;
+    transform: rotate(0deg);
+}
+
+#W{
+    position:relative;
+    bottom:30px;
+    left:60px;
+}
+
+#W1{
+    position:relative;
+    bottom:285px;
+    left:100px;
+}
+
+#transformer_image {
+
+    position: relative;
+     bottom: 600px;
+     left: -280px;
+     border-radius: 21px;
+}
+
+#P_W {
+
+    position:relative;
+    bottom:135px;
+    right:81px;
+    transform-origin:81.9%;
+    transform: rotate(0deg);
+}
+
+#output_P_W {
+
+    position:relative;
+    bottom:393px;
+    right:45px;
+    transform-origin:81.9%;
+    transform: rotate(0deg);
+}
+
+#Var_Knob {
+
+    position:relative;
+    z-index: 2;
+    bottom:245px;
+    left:-276px;
+}
+
+#Var {
+
+    position:relative;
+    right:540px;
+    bottom:80px;
+}
+
+ #fuse{
+
+    position:relative;
+    bottom:180px;
+    right:460px;
+}
+
+
+
+.loads  {
+
+    position: relative;
+    bottom:392px;
+    left:580px;
+    height:200px;
+    width:270px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+
+
+}
+
+.loads input{
+
+    text-align: center;
+    border: none;
+    height: 35px;
+    outline: none;
+    background-color: rgba(129, 129, 129, 0.313);
+    margin: 5px 10px;
+    border-radius: 10px;
+
+    text-align: center;
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 20px;
+    transition: all 0.25s ease-in, border 0.001s ease-in-out;
+    cursor: pointer;
+}
+.loads input:hover{
+    background-color: #1e1e1ee8;
+    color: rgb(238, 234, 234);
+}
+.loads input:active{
+    background-color: #606471;
+    color: rgb(238, 234, 234);
+    transform: translate(2px,2px)
+}
+
+
+/*Loads Division. note:- the width of division is intentionally changed and updated here.*/
+
+.loads {
+    margin-top: 360px;
+    margin-left: -10px;
+    float: left;
+    height: 300px;
+    width: 340px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.loads p {
+
+    color: #111111;
+}
+
+.loads img {
+
+    display: block;
+    margin: auto auto;
+    margin-top: -30px;
+
+}
+
+#R-lamp {
+
+    margin-top: -25px;
+}
+
+.loads button {
+    outline: none;
+    border: none;
+    background-color: rgb(247, 21, 21);
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    cursor: pointer;
+
+}
+
+#b_start,
+#y_start,
+#r_start {
+    position: relative;
+    bottom: 34px;
+    left: 30px;
+
+}
+#b_end,
+#y_end,
+#r_end {
+    position: relative;
+    bottom: 34px;
+    left: 285px;
+
+}
+
+/*Assets Done*/
+.nodes {
+    position:relative;
+    bottom:200px;
+    float: center;
+    z-index:+1;
+}
+
+.nodes button {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-color: #36beb1;
+    border-radius: 25px;
+}
+
+/* position of nodes */
+
+#p_mcb{
+
+position:relative;
+bottom:325px;
+left:-300px;
+height:10px;
+width:10px;
+
+}
+
+#n_mcb{
+position:relative;
+bottom:325px;
+left:-285px;
+height:10px;
+width:10px;
+
+}
+#on_mcb{
+
+appearance: none;
+position:relative;
+bottom:550px;
+right:15px;
+height:10px;
+width:70px;
+opacity: 0;
+
+}
+
+#p_v{
+
+    position:relative;
+    bottom:320px;
+    left:-135px;
+    height:10px;
+    width:10px;
+
+    }
+
+#n_v {
+
+        position:relative;
+        bottom:320px;
+        left:-102px;
+        height:10px;
+        width:10px;
+
+        }
+
+
+ #p_a{
+
+position:relative;
+bottom:320px;
+left:45px;
+height:10px;
+width:10px;
+
+    }
+
+#n_a {
+
+    position:relative;
+    bottom:320px;
+    left:80px;
+    height:10px;
+    width:10px;
+
+    }
+
+#v_w{
+
+    position:relative;
+    bottom:305px;
+    left:190px;
+    height:10px;
+    width:10px;
+
+    }
+
+#l_w{
+
+    position:relative;
+    bottom:305px;
+    left:205px;
+    height:10px;
+    width:10px;
+
+    }
+
+#m_w{
+
+    position:relative;
+    bottom:305px;
+    left:220px;
+    height:10px;
+    width:10px;
+
+    }
+
+#c_w{
+
+    position: relative;
+    height:10px;
+    width:10px;
+    bottom:305px;
+    left:235px;
+
+}
+
+#a_var{
+
+    position: relative;
+    height: 12px;
+    width: 12px;
+    bottom:130.8px;
+    left: -160px;
+
+}
+
+#b_var{
+
+    position: relative;
+    height: 12px;
+    width: 12px;
+    bottom:130.8px;
+    left: -125px;
+
+}
+
+#c_var{
+
+    position: relative;
+    height: 12px;
+    width: 12px;
+    bottom:73px;
+    left: -195px;
+}
+
+#d_var{
+
+    position: relative;
+    height: 12px;
+    width: 12px;
+    bottom:73px;
+    left: -155px;
+
+}
+
+/*  nodes for the Output Instruments  */
+
+#output_p_v {
+
+position: absolute;
+margin-top: 280px;
+margin-left: -440px;
+height: 12px;
+width: 12px;
+
+}
+
+#output_n_v {
+
+position:absolute;
+margin-top: 280px;
+margin-left:-390px;
+height: 12px;
+width: 12px;
+
+}
+
+#output_p_a {
+
+position: absolute;
+margin-top: 280px;
+margin-left:-230px;
+height: 12px;
+width: 12px;
+
+}
+
+#output_n_a {
+
+position: absolute;
+margin-top: 280px;
+margin-left: -180px;
+height: 12px;
+width: 12px;
+}
+
+#output_v_var {
+
+position: absolute;
+margin-top: 283px;
+margin-left: -68px;
+height: 12px;
+width: 12px;
+}
+
+#output_l_var {
+
+position: absolute;
+margin-top:283px ;
+margin-left: -38px;
+height: 12px;
+width: 12px;
+}
+
+#output_m_var {
+
+position: absolute;
+margin-top: 283px;
+margin-left: -5px;
+height: 12px;
+width: 12px;
+}
+
+#output_c_var{
+
+position: absolute;
+margin-top:283px ;
+margin-left: 25px;
+height: 12px;
+width: 12px;
+}
+
+
+#var_on{
+
+    position: relative;
+    height: 28px;
+    width: 28px;
+     float:right;
+    bottom:380px;
+    right:608px;
+    opacity: 1;
+}
+
+
+
+#p_switch{
+    position:relative;
+    bottom:260px;
+    left:105px;
+    height:10px;
+    width:10px;
+
+    }
+#n_switch{
+    position:relative;
+    bottom:165px;
+    left:89px;
+    height:10px;
+    width:10px;
+
+    }
+
+/*Instruction Start here*/
+
+.instructions {
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    z-index: +2;
+    filter: drop-shadow(2px 2px 8px rgba(56, 53, 53, 0.315));
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 19px;
+    padding-top: -20px;
+    overflow: visible;
+    transition: all 0.2s ease-in-out;
+    position: absolute;
+    top: 40px;
+    left: -300px;
+    height: 650px;
+    width: 300px;
+}
+
+.instructions:hover {
+    left: 0px;
+}
+
+.insHeading {
+
+    background-color: #afaeae;
+    border-radius: 8px;
+    margin-right: 0px;
+    margin-left: 10px;
+    text-align: center;
+    margin-top: -10px;
+    font-size: 30px;
+    height: 40px;
+    width: 90%;
+}
+
+.steps {
+    margin-top: -20px;
+    margin-left: 0px;
+    margin-right: -5px;
+    text-align: left;
+    padding-top: 0px;
+    border-radius: 10px;
+    font-size: 19px;
+    overflow: auto;
+    height: 550px;
+}
+
+.MyLabel {
+    background-color: #111111;
+    color: #e8e8e8;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 0px 10px 10px 0px;
+    height: 120px;
+    width: 50px;
+    position: absolute;
+    top: 10px;
+    left: 300px;
+}
+
+#s1{
+    color: red;
+}
+
+/* Making images unselectable */
+
+.calculation input{
+    margin-top: -180px;
+    position: relative;
+    width:60px;
+
+}
+#DeviceC1{
+    bottom:370px;
+    right:570px;
+}
+#VariacValC{
+    bottom:345px;
+    right:630px;
+}
+#AmmeterC{
+    bottom:240px;
+    right:740px;
+}
+#VoltmeterC{
+    bottom:215px;
+    right:812px;
+}
+#WattmeterC{
+    bottom:185px;
+    right:882px;
+}
+#numerator{
+    bottom:95px;
+    right:902px;
+
+}
+#denominator1{
+    bottom:65px;
+    right:1015px;
+
+}
+#denominator2{
+    bottom:65px;
+    right:1010px;
+
+}
+#equalto{
+    bottom:80px;
+    right:1010px;
+
+}
+#DeviceC2{
+    bottom:52px;
+    left:205px;
+    width:100px;
+
+}
+#powerfactor{
+    bottom:52px;
+    left:235px;
+
+}
+
+
+/*Variac Slider*/
+
+#variacSlider {
+    z-index: +2;
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 100px;
+    bottom:500px;
+    left:70px;
+    background-color: #111111;
+    border-radius: 2px;
+
+}
+
+#variacSlider::-webkit-slider-thumb {
+
+    z-index: +2;
+    appearance: none;
+    height: 40px;
+    border-radius: 2px;
+    width: 10px;
+    cursor: grab;
+    background-color: #aa0a0a;
+}
+
+#variacSlider::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
+
+#variacSlider:disabled {
+
+    z-index: +2;
+    background-color: #808080;
+    cursor: default;
+
+}
+
+#variacSlider:disabled::-webkit-slider-thumb {
+
+    background-color: #808080;
+    cursor: default;
+}
+
+.nodes label{
+    text-align: center;
+    font-family: 'Zacbel X', sans-serif;
+    overflow: visible;
+position: absolute;
+
+
+font-size: 14px;
+
+border: 2px solid white;
+background-color: white;
+border-radius: 2px;
+
+
+}
+.positive button label{
+    transform: translate(-6px, 20px);
+}
+.nodes{
+    position: relative;
+    top:-205px;
+}
+
+#label3,#label4{
+
+    transform: translate(-8px,-35px);
+}
+
+
+
+/*  CSS for the graphs   */
+
+.graph {
+
+    position: relative;
+    top: 25em;
+    width: 1300px;
+    height: 700px;
+    margin: 0px auto;
+    border-radius: 10px;
+    background-color: #b1b1b1;
+}
+
+.graph .graph-heading {
+    width: 1300px;
+    height: 60px;
+    background-color: #d0d0d0;
+    border-radius: 10px;
+}
+
+.graph p {
+    position: relative;
+    left: 11em;
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 50px;
+    color: #111111;
+    padding: 5px;
+
+}
+
+.MyCanvas {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    border-radius: 10px;
+    filter: drop-shadow(10px 10px 10px rgba(75, 75, 75, 0.31))
+}
+.control-panel-buttons button:disabled:hover {
+    background-color: rgba(129, 129, 129, 0.313);
+   color: #919191;
+   cursor: default;
+}
+
+.control-panel-buttons button:disabled:active {
+   background-color: rgba(129, 129, 129, 0.313);
+   color: #919191;
+   border: none;
+   cursor: default;
+}
+.sliders input:disabled:-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: #d0d0d0;
+    transition: background-color 0.2s ease-in;
+}
+
+.sliders input:disabled::-webkit-slider-thumb:hover {
+    cursor: default;
+    background-color: #d0d0d0
+}
+
+.sliders input:disabled::-webkit-slider-thumb:active {
+    cursor: default;
+
+}

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment</title>
+    <link href="../CDN_folder/Font(zacbel-x).css" rel="stylesheet">
+    <link href="../CDN_folder/Font(foco-trial).css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@firestitch/jsplumb@2.12.0/dist/js/jsplumb.min.js"></script>
+    <script src="../CDN_folder/ChartCDN.js"></script>
+
+
+
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="instructions" id="instTab">
+            <div class="insHeading">
+                <p>Instructions</p>
+
+                <ul class="steps">
+                    <li>!!! Click on the label to delete all connections for the corresponding node.</li>
+                    <li id="s1">Make connections by dragging nodes from aparatus to the circuit.</li>
+                        <ul>
+                            <li>Connect power-supply to the right most nodes of the curcit. (1->9, 2->10)</li>
+                            <li>Connect ammeters (3-11, 4-12) and (5-13, 6-14) and (7-15, 8-16) or you can connect any ammeter to any resistance in circuit.</li>
+                            <li>Click on the label to delete all the connections for the corresponding nodes.</li>
+                        </ul>
+                    <li id="s2">Check your connections by clicking on the 'CHECK' button.</li>
+                    <li id="s3">Set the values of resistances R1, R2, R3 by adjusting the sliders on left, these values will remain constant throughout the experiment.</li>
+                    <li id="s4">Turn on the Power Supply and choose a voltage value, the reading on ammeters will change accordingly.</li>
+                    <li id="s5">Click on the 'ADD' button to add the values to observation table.</li>
+                    <li id="s6">Add a few observations to the table by while changing the value of voltage from Power Supply.</li>
+                    <li id="s7">Click on the 'PLOT' button to create a plot.</li>
+                    <li>Click on 'RESET' button to refresh the page.</li>
+                </ul>
+            </div>
+
+            <div class="MyLabel">
+                <p>
+                    Instructions
+                </p>
+            </div>
+        </div>
+
+        <div class="heading">
+
+            <p>TO VERIFY KIRCHHOFF'S CURRENT LAW</p>
+
+        </div>
+
+        <div class="clear"></div>
+
+
+        <div class="control-panel">
+
+            <div class="control-panel-buttons">
+                <p>ACTION BUTTONS</p>
+                <button id="check">CHECK</button>
+                <button id="add" disabled="true">ADD</button>
+                <button id="plot" disabled="true">PLOT</button>
+                <button id="reset">RESET</button>
+                <button id="print" disabled>PRINT</button>
+                <!--THIS IS TO BE KEPT IN A FLEX BOX-->
+            </div>
+
+        </div>
+        <!--CONTROL PANEL ENDS HERE-->
+
+
+        <div class="sliders">
+            <p>SLIDERS</p>
+
+            <input type="range" disabled="true" id="r1val" name="r1val" value="1" min="1" max="20" step="0.1">
+            <label id = "r1_label"for="r1val">R1(&#8486;) </label>
+
+
+            <input type="range" disabled="true" id="r2val" name="r2val" value="1" min="1" max="20" step="0.1">
+            <label id = "r2_label" for="r2val">R2(&#8486;)</label>
+
+
+            <input type="range" disabled="true" id="r3val" name="r3val" value="1" min="1" max="20" step="0.1">
+            <label id = "r3_label" for="r3val" >R3(&#8486;)</label>
+
+        </div>
+        <div class="meters">
+            <div class="power-supply">
+                <img class="supply" id="power-supply" width="430px" height='250px' src="../Assets/PowerSupplyOff.png"
+                    alt="">
+            </div>
+
+            <div class="voltmeters">
+                <img src="../Assets/V1.png" height="200" width="200" alt="Voltmeter" class="Voltmeter1">
+
+                <img class="pointer1" height="11" width="44" id="ndl1" src="../Assets/Pointer.png" alt="">
+
+                <img src="../Assets/V2.png" height="200" width="200" alt="Voltmeter" class="Voltmeter2">
+
+                <img class="pointer2" height="11" width="44" id="ndl2" src="../Assets/Pointer.png" alt="">
+
+                <img src="../Assets/V3.png" height="200" width="200" alt="Voltmeter" class="Voltmeter3">
+
+                <img class="pointer3" height="11" width="44" id="ndl3" src="../Assets/Pointer.png" alt="">
+
+
+            </div>
+            <input type="range" disabled="true" id="PSval" name="PSval" value="0" min="0" max="10" step="0.1">
+            <input type="text" class="PSdisplay" class="SeeOnly" id="PSdis" value="0 V" readonly>
+
+
+        </div>
+
+        <div class="circuit">
+            <img height="550" width="800" src="../Assets/circuit.png" class="diagram" id="cdiag" alt="">
+        </div>
+        <div class="table">
+            <p>OBSERVATION TABLE</p>
+            <!--TABLE TO BE DISPLAYED HERE-->
+            <table id="valTable">
+                <tr>
+                    <th>S.No</th>
+                    <th>Voltage</th>
+                    <th>I1</th>
+                    <th>I2</th>
+                    <th>I3</th>
+                </tr>
+
+            </table>
+        </div>
+
+
+        <div class="nodes">
+            <!-- These are the Nodes. Please Declare div here if using plumbjs-->
+            <button id="pow-start"
+                onclick="document.getElementById('power-supply').src='../Assets/PowerSupplyOn.png'" disabled="true"></button>
+
+                <allnodes>
+                <div class="node">
+                    <button id="vp"><label onclick="disconnect(0)">1</label></button>
+                    <button id="vn"><label onclick="disconnect(1)">2</label></button>
+                    <button id="v1p"><label onclick="disconnect(2)">3</label></button>
+                    <button id="v1n"><label onclick="disconnect(3)">4</label></button>
+                    <button id="v2p"><label onclick="disconnect(4)">5</label></button>
+                    <button id="v2n"><label onclick="disconnect(5)">6</label></button>
+                    <button id="v3p"><label onclick="disconnect(6)">7</label></button>
+                    <button id="v3n"><label onclick="disconnect(7)">8</label></button>
+                </div>
+                <div class="node-circuit">
+                    <!--  c- refers to the position in the circuit -->
+                    <button id="c-vp"><label id = "label9" onclick="disconnect(8)">9</label></button>
+                    <button id="c-vn"><label id = "label10" onclick="disconnect(9)">10</label></button>
+                    <button id="c-v1p"><label id = "label11" onclick="disconnect(10)">11</label></button>
+                    <button id="c-v1n"><label id = "label12" onclick="disconnect(11)">12</label></button>
+                    <button id="c-v2p"><label id = "label13" onclick="disconnect(12)">13</label></button>
+                    <button id="c-v2n"><label id = "label14" onclick="disconnect(13)">14</label></button>
+                    <button id="c-v3p"><label id = "label15" onclick="disconnect(14)">15</label></button>
+                    <button id="c-v3n"><label id = "label16" onclick="disconnect(15)">16</label></button>
+                </div>
+                </allnodes>
+
+        </div>
+        <div class="input-boxes">
+            <input class="SeeOnly" type="text" id='textInputR1' value="1" readonly>
+            <input class="SeeOnly" type="text" id='textInputR2' value="1" readonly>
+            <input class="SeeOnly" type="text" id='textInputR3' value="1" readonly>
+        </div>
+
+
+
+
+
+        <div class="clear"></div>
+
+        <div class="graph" id="plotContiner">
+            <div class="graph-heading">
+                <p>GRAPH</p>
+                </div>
+                <div class="chart-container">
+                <canvas id="myPlot" class="MyCanvas" height = "600" width = "1000">
+
+                </canvas>
+                </div>
+
+
+    </div>
+
+
+
+</body>
+
+<script src="../function/working.js"></script>
+
+</html>

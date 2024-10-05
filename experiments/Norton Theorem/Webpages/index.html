@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <link href="../CDN_folder/Font(zacbel-x).css" rel="stylesheet">
+    <link href="../CDN_folder/Font(foco-trial).css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@firestitch/jsplumb@2.12.0/dist/js/jsplumb.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <!--ROW1-->
+        <div class="heading">
+            <!--Heading goes here-->
+            <p>TO VERIFY NORTON'S THEOREM</p>
+        </div>
+
+        <div class="instructions" id="instTab">
+            <div class="insHeading">
+                <p>Instructions</p>
+
+                <ul class="steps">
+                    <li>!!! Click on labels to delete all connections for the corrusponding node.</li>
+                    <li id="s1">Set the values of resistances R1, R2, R3, R_load and voltage by adjusting the sliders on
+                        left</li>
+                    <li id="s2">Make connections and check them by clicking 'CHECK' button, and then record observations by clicking on 'ADD'</li>
+                    <ul>
+                        <li>To measure R_th, short circuit the terminals for power-supply, and connect the circuit to
+                            multimeter, and check connections. 7->8, 3->9, 4->11</li>
+                        <li><b>Turn on the power-supply before measuring current.</b></li>
+                        <li>Now measure I_sc connect cirucit to power-supply, connect the red and blue nodes of the main curcit to the ammeter. 5->7, 6->8, 1->9, 2->11</li>
+
+                        <li>To measure load current connect the blue nodes (lower right hand side of screen) to each other, and connect ammeter in series to R_load. 5->7, 6->8, 11->12, 1->9, 10->2</li>
+
+                    </ul>
+                    <li id="s3">Click the 'CALCULATE' button to verify the reslts.</li>
+                    <li id="s4">Repeat the above process with different values of resistances.</li>
+                </ul>
+            </div>
+            <div class="MyLabel">
+                <p>
+                    Instructions
+                </p>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!--ROW2-->
+        <div class="r2">
+
+            <div class="r2c1">
+
+
+                <div class="action-buttons">
+                    <p>ACTION BUTTONS</p>
+                    <div class="control-panel-buttons">
+                        <button id="check">CHECK</button>
+                        <button id="add" disabled="true">ADD</button>
+                        <button id="calculate" disabled="true">CALCULATE</button>
+                        <button id="reset">RESET</button>
+                        <button id="print" disabled="true" onclick="window.print()">PRINT</button>
+                        <!--THIS IS TO BE KEPT IN A FLEX BOX-->
+                    </div>
+                </div>
+                <!--Row 2 Col 1 Row1-->
+
+                <div class="formulas">
+                    <p>SLIDERS</p>
+
+                    <input type="range" min="100" max="300" step="100" value="100" id="Rls">
+                    <label for="Rls">Rl</label>
+
+                    <input type="range" min="0.1" max="10" step="0.1" value="0.1" id="R1">
+                    <label for="R1">R1</label>
+                    <input type="range" min="0.1" max="10" step="0.1" value="0.1" id="R2">
+                    <label for="R2">R2</label>
+                    <input type="range" min="0.1" max="10" step="0.1" value="0.1" id="R3">
+                    <label for="R3">R3</label>
+                </div>
+
+                <!--Row 2 Col 1 Row2-->
+                <div class="o_table">
+                    <p>OBSERVATION TABLE</p>
+                    <div class="table">
+                        <!--TABLE TO BE DISPLAYED HERE-->
+                        <table id="valTable">
+                            <tr>
+                                <th>S.No.</th>
+                                <th>Power-supply</th>
+                                <th>I_sc</th>
+                                <th>R_n</th>
+                                <th>IL</th>
+                                <th>R_load</th>
+                            </tr>
+                            <tr>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                                <td>-</td>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <!--Row 3 Col 1 -->
+
+
+
+            </div>
+
+
+            <div class="r2c2">
+
+                <div class="circuit">
+                    <p>EXPERIMENT</p>
+                    <div class="c-diag">
+
+
+                        <img src="../Assets/A1.png" id="A" height="215" width="215" alt="">
+                        <img src="../Assets/Pointer.png" height="13" width="56" id="P_A" alt="">
+
+
+
+                        <img src="../Assets/multimeter_default.png" id="M" height="230" width="152" alt="">
+                        <img src="../Assets/Multimeter pointer.png" id="P_M" height="230" width="152" id="P_A" alt="">
+
+
+                        <br>
+
+                        <img src="../Assets/PowerSupplyOff.png" alt="" id="power" height="190" width="316">
+
+                        <img src="../Assets/THEVENIN.png" id="circuit_diagram" alt="" height="430" width="550">
+
+
+
+                        <div class="nodes">
+
+                            <div class="positive">
+
+
+                                <button id="p_a"><label id = "label1" onclick="disconnect(0)">1</label></button>
+                                <button id="n_a"><label id = "label2" onclick="disconnect(1)">2</label></button>
+
+
+                                <ckt-element-shift>
+                                <button id="p_power"><label id = "label7" onclick="disconnect(4)">5</label></button>
+                                <button id="n_power"><label id = "label8" onclick="disconnect(5)">6</label></button>
+                                <button id="on_power" disabled="true"></button>
+
+                                <button id="c_p_power1"><label id = "label9" onclick="disconnect(6)">7</label></button>
+                                <button id="c_n_power1"><label id = "label10" onclick="disconnect(7)">8</label></button>
+
+                                <button id="c_ul"><label id = "label11" onclick="disconnect(8)">9</label></button>
+                                <button id="c_ur"><label id = "label12" onclick="disconnect(9)">10</label></button>
+                                <button id="c_ll"><label id = "label13" onclick="disconnect(10)">11</label></button>
+                                <button id="c_lr"><label id = "label14" onclick="disconnect(11)">12</label></button>
+                            </ckt-element-shift>
+                                <button id="p_mul"><label id = "label5" onclick="disconnect(2)">3</label></button>
+                                <button id="n_mul"><label id = "label6" onclick="disconnect(3)">4</label></button>
+
+
+
+                                <input class="SeeOnly"  readonly type="text" id="PSDisplay" value="0 V">
+                                <input class="SeeOnly" readonly type="text" id="MMDisplay" value="0">
+                                <ckt-element-shift>
+                                <input class="SeeOnly" readonly type="text" id="RlDisplay" value="100">
+                                <input class="SeeOnly" readonly type="text" id="R1Display" value="0.1">
+                                <input class="SeeOnly" readonly type="text" id="R2Display" value="0.1">
+                                <input class="SeeOnly" readonly type="text" id="R3Display" value="0.1">
+                            </ckt-element-shift>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                <div class="circuit_buttons"></div>
+                <div class="slider_values">
+                    <input type="range" min="0" max="50" step="1" value="0" id="variacSlider" disabled="false">
+
+                </div>
+
+
+            </div>
+            <!--Row 2 Col 2-->
+
+
+        </div>
+
+
+
+    <div class="clear"></div>
+
+
+    <div class="r3">
+        <div class="calculation">
+            <p>CALCULATIONS</p>
+            <img src="../Assets/calculations.png" id="calculation_png" height="400" width="700" lt="">
+            <input class="SeeOnly" readonly type="text" id="IscC">
+            <input class="SeeOnly" readonly type="text" id="ReqC">
+            <input class="SeeOnly" readonly type="text" id="RlC">
+            <input class="SeeOnly" readonly type="text" id="numeriator1">
+            <input class="SeeOnly" readonly type="text" id="ReqC2">
+            <input class="SeeOnly" readonly type="text" id="RlC2">
+            <input class="SeeOnly" readonly type="text" id="newcell">
+            <input class="SeeOnly" readonly type="text" id="numeriator2">
+            <input class="SeeOnly" readonly type="text" id="IlC">
+            <input type="text" id="user">
+
+            <button id="verify" disabled="true">Verify</button>
+        </div>
+
+    </div>
+
+    </div>
+
+</div>
+</body>
+<script src="../Function/function.js"></script>
+
+</html>

@@ -1,0 +1,944 @@
+/*BASE STYLING GOES HERE*/
+body{
+    background-image: linear-gradient(#eaeaea,#d6d6d6);
+    background-repeat: no-repeat;
+}
+.clear{
+    float:none;
+}
+
+.container{
+
+    background-color: #606471;
+    width: 1500px;
+    /* height: 1300px; */
+    height:auto;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 10px;
+}
+.heading{
+    height:60px;
+    width:1400px;
+    margin: 0 30px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+    background-color: #eaeaea;
+    border-radius: 10px;
+
+}
+.r2{
+    float:left;
+
+    width: 1500px;
+    margin: 00px 30px;
+    border-radius: 10px;
+
+}
+
+.r2c1{
+    float:left;
+
+    width: 500px;
+    height: 300px;
+
+
+    border-radius: 10px;
+
+}
+.action-buttons{
+    background-color: #eaeaea;
+    width: 500px;
+    height: 100px;
+
+
+    border-radius: 10px;
+
+}
+.formulas{
+    display: block;
+    background-color: #eaeaea;
+    width: 500px;
+    height: 195px;
+    border-radius: 10px;
+    margin:0 auto;
+
+}
+
+.r2c2{
+
+   float:left;
+    background-color: rgb(35, 35, 35);
+    width: 870px;
+    height: 600px;
+    border-radius: 10px;
+    margin: 20px 30px;
+
+}
+.r3{
+    float:left;
+
+    width: 1400px;
+    height: 500px;
+    margin: 30px 30px 30px 30px;
+    border-radius: 10px;
+    background-color: white;
+    color: #111111;
+
+
+
+}
+.r2c1 .o_table{
+    float:left;
+
+    width: 500px;
+    height: 250px;
+    background-color: #eaeaea;
+    margin-top: 30px;
+    border-radius: 10px;
+
+}
+
+
+.r2c1 .o_table p{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.r3c2{
+    float:left;
+    background-color: rgb(35, 35, 35);
+    width: 870px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 0px 30px;
+
+}
+
+/*Text Edits Default*/
+.heading p{
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Zacbel X', sans-serif;
+    color:rgb(31, 31, 31);
+}
+.action-buttons p{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color:rgb(31, 31, 31);
+}
+.formulas {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color:rgb(31, 31, 31);
+}
+.formulas formula-text{
+    font-size: 15px;
+}
+.o_table p{
+
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color:rgb(31, 31, 31);
+}
+
+.circuit p{
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color: #eaeaea;
+}
+
+.calculation p{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Zacbel X', sans-serif;
+    color: #111111;
+}
+
+
+/*Buttons CSS*/
+.action-buttons {
+    border: none;
+
+}
+
+.control-panel-buttons {
+    display: block;
+
+    height: 40px;
+    width: 500px;
+    background-color: #eaeaea;
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+.control-panel-buttons button,#VRF {
+    border: none;
+    height: 35px;
+    outline: none;
+    background-color: rgba(129, 129, 129, 0.313);
+
+    margin: 0px 10px;
+    border-radius: 10px;
+
+
+    text-align: center;
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 20px;
+    transition: all 0.25s ease-in, border 0.001s ease-in-out;
+    cursor: pointer;
+}
+
+.control-panel-buttons button:hover ,#VRF:hover{
+    background-color: #1e1e1ee8;
+    color: rgb(238, 234, 234);
+
+}
+
+.control-panel-buttons button:active ,#VRF:active {
+    background-color: #606471;
+    color: rgb(238, 234, 234);
+    border: 3px solid #6a6b6e;
+}
+/*Table Css*/
+.o_table {
+
+
+
+    border-radius: 10px;
+    width: 500px;
+    height: 380px;
+
+
+
+}
+
+.o_table table {
+    width: 500px;
+    text-align: center;
+    padding: 2px;
+
+}
+
+.o_table td {
+    border-radius: 0px;
+    border: 1px solid #1e1e1e;
+}
+
+.o_table th {
+    border-radius: 10px;
+    border: 2px solid #1e1e1e;
+}
+
+
+/*Assets Placement*/
+/* #W{
+    position: relative;
+    right:2px;
+    top:130px;
+}
+#P_W{
+    position:relative;
+    right:142px;
+    top:26.5px;
+    transform-origin: 81.9%;
+    transform:rotate(0deg);
+
+
+}
+#A{
+    position: relative;
+    right:100px;
+    bottom:35px;
+}
+#P_A{
+    position: relative;
+    right:235.5px;
+    bottom:127px;
+    transform-origin: 81.9%;
+    transform:rotate(90deg);
+
+
+}
+#fuse{
+    position: relative;
+    right:120px;
+    bottom:100px;
+}
+#Var{
+    position: relative;
+    left:550px;
+    bottom:130px;
+    z-index: 0;
+}
+#Var_Knob{
+    position:relative;
+    z-index: +1;
+    left:96px;
+    top:110px;
+    transform:rotate(0deg);
+
+}
+#MCB{
+    position:relative;
+    bottom:480px;
+    left:255px;
+}
+#V{
+    position: relative;
+    right:320px;
+    bottom:140px;
+}
+#P_V{
+    position: relative;
+    right:455px;
+    bottom:233px;
+
+}
+#switch{
+    position: relative;
+    left:470px;
+    bottom:670px;
+
+
+} */
+
+/*Assets Placement New*/
+#MCB{
+    position: relative;
+    bottom:90px;
+}
+#V{
+    position: relative;
+    bottom:50px;
+    left:135px;
+}
+#P_V{
+    position:relative;
+    bottom:143px;
+    transform-origin:81.9%;
+    transform: rotate(0deg);
+
+}
+#A{
+    position: relative;
+    bottom:50px;
+    left:115px;
+}
+#P_A{
+    position:relative;
+    bottom:143px;
+    right:20px;
+    transform-origin:81.9%;
+    transform: rotate(0deg);
+}
+#W{
+    position:relative;
+    bottom:30px;
+    left:60px;
+}
+#P_W{
+    position:relative;
+    bottom:135px;
+    right:81px;
+    transform-origin:81.9%;
+    transform: rotate(0deg);
+}
+#Var_Knob{
+    position:relative;
+    z-index: 2;
+    bottom:315px;
+    left:69px;
+    transform-origin:48.5%;
+}
+#Var{
+    position:relative;
+    right:195px;
+    bottom:150px;
+}
+ #fuse{
+    position:relative;
+    bottom:180px;
+
+    right:460px;
+
+
+}
+
+#switch{
+    position:relative;
+    bottom:100px;
+
+    right:469px;
+}
+
+
+.loads{
+    position: relative;
+    bottom:312px;
+    left:490px;
+    height:200px;
+    width:300px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+
+
+}
+
+.loads input{
+
+    text-align: center;
+    border: none;
+    height: 35px;
+    outline: none;
+    background-color: rgba(129, 129, 129, 0.313);
+
+    margin: 5px 10px;
+    border-radius: 10px;
+
+
+    text-align: center;
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 20px;
+    transition: all 0.25s ease-in, border 0.001s ease-in-out;
+    cursor: pointer;
+}
+.loads input:hover{
+    background-color: #1e1e1ee8;
+    color: rgb(238, 234, 234);
+}
+.loads input:active{
+    background-color: #606471;
+    color: rgb(238, 234, 234);
+    transform: translate(2px,2px)
+}
+/*Assets Done*/
+.nodes {
+    position:relative;
+    bottom:200px;
+    float: center;
+    z-index:+3;
+}
+
+.nodes button {
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    border: none;
+    background-color: #36beb1;
+    border-radius: 25px;
+}
+/* position of nodes */
+#p_mcb{
+position:relative;
+bottom:522px;
+left:30px;
+height:10px;
+width:10px;
+
+}
+#n_mcb{
+position:relative;
+bottom:522px;
+left:47px;
+height:10px;
+width:10px;
+
+}
+#on_mcb{
+/* appearance: none; */
+
+position:relative;
+bottom:534px;
+right:15px;
+height:10px;
+width:70px;
+
+opacity:0;
+
+}
+
+#p_v{
+    position:relative;
+    bottom:526px;
+    left:121.5px;
+    height:10px;
+    width:10px;
+
+    }
+#n_a{
+    position:relative;
+    bottom:526px;
+    left:340px;
+    height:10px;
+    width:10px;
+    }
+#p_a{
+    position:relative;
+    bottom:526px;
+    left:304px;
+    height:10px;
+    width:10px;
+
+    }
+#n_v{
+    position:relative;
+    bottom:526px;
+    left:157px;
+    height:10px;
+    width:10px;
+    }
+#v_w{
+    position:relative;
+    bottom:514px;
+    left:445px;
+    height:10px;
+    width:10px;
+
+    }
+#l_w{
+    position:relative;
+    bottom:514px;
+    left:460px;
+    height:10px;
+    width:10px;
+
+    }
+#m_w{
+    position:relative;
+    bottom:514px;
+    left:476px;
+    height:10px;
+    width:10px;
+
+    }
+#c_w{
+    position: relative;
+    height:10px;
+    width:10px;
+    bottom:514px;
+    left:493px;
+
+}
+#a_var{
+    position: relative;
+    height: 12px;
+    width: 12px;
+    bottom:403.8px;
+    right: 84.2px;
+
+}
+#b_var{
+    position: relative;
+    height: 12px;
+    width: 12px;
+    bottom:403.8px;
+    right: 44.2px;
+
+}
+#c_var{
+    position: relative;
+    height: 12px;
+    width: 12px;
+    bottom:348px;
+    right: 115.2px;
+}
+#d_var{
+    position: relative;
+    height: 12px;
+    width: 12px;
+    bottom:348px;
+    right: 78.2px;
+
+}
+#var_on{
+
+    position: relative;
+    height: 28px;
+    width: 28px;
+
+    float:right;
+    bottom:380px;
+    right:608px;
+
+    opacity: 0;
+}
+
+
+#p_fuse{
+    position:relative;
+    bottom:220px;
+    right:47px;
+    height:10px;
+    width:10px;
+
+    }
+#n_fuse{
+    position:relative;
+    bottom:220px;
+    left:45px;
+    height:10px;
+    width:10px;
+
+    }
+#p_switch{
+    position:relative;
+    bottom:260px;
+    left:105px;
+    height:10px;
+    width:10px;
+
+    }
+#n_switch{
+    position:relative;
+    bottom:165px;
+    left:89px;
+    height:10px;
+    width:10px;
+
+    }
+
+#p_l{
+    position:relative;
+    float:right;
+    height: 12px;
+    width: 12px;
+    bottom:295px;
+    right:148px;
+
+}
+#n_l{
+    position: relative;
+    float:right;
+    height: 12px;
+    width: 12px;
+    bottom:295px;
+    right:91px;
+}
+
+#starter_l{
+
+    position: relative;
+    bottom:190px;
+    left:189px;
+    height: 10px;
+    width:10px;
+
+    opacity: 0;
+}
+#starter_r{
+
+    position: relative;
+    bottom:190px;
+    left:189px;
+    height: 10px;
+    width:10px;
+
+    opacity: 0;
+}
+#choke_l{
+
+    position: relative;
+    bottom:190px;
+    left:255px;
+    height: 10px;
+    width:10px;
+
+    opacity: 0;
+}
+#choke_r{
+
+    position: relative;
+    bottom:190px;
+    left:275px;
+    height: 10px;
+    width:10px;
+
+    opacity: 0;
+}
+
+
+
+
+/*Instruction Start here*/
+
+.instructions {
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    z-index: +2;
+    filter: drop-shadow(2px 2px 8px rgba(56, 53, 53, 0.315));
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 19px;
+    padding-top: -20px;
+    overflow: visible;
+
+    transition: all 0.2s ease-in-out;
+
+    position: absolute;
+    top: 40px;
+    left: -300px;
+
+    height: 650px;
+    width: 300px;
+}
+
+.instructions:hover {
+    left: 0px;
+}
+
+.insHeading {
+
+    background-color: #afaeae;
+    border-radius: 8px;
+    margin-right: 0px;
+    margin-left: 10px;
+    text-align: center;
+    margin-top: -10px;
+    font-size: 30px;
+
+    height: 40px;
+    width: 90%;
+}
+
+.steps {
+    margin-top: -20px;
+    margin-left: 0px;
+    margin-right: -5px;
+    text-align: left;
+    padding-top: 0px;
+    border-radius: 10px;
+    font-size: 19px;
+    overflow: auto;
+    height: 550px;
+}
+
+.MyLabel {
+    background-color: #111111;
+    color: #e8e8e8;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 0px 10px 10px 0px;
+
+    height: 120px;
+    width: 50px;
+
+    position: absolute;
+    top: 10px;
+    left: 300px;
+}
+
+#s1{
+    color: red;
+}
+
+/* Making images unselectable */
+.forbidden {
+    pointer-events: none;
+    -moz-user-select: none;
+user-select: none;
+
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+
+
+.calculation input{
+    margin-top: -180px;
+    position: relative;
+    width:60px;
+
+}
+#DeviceC1{
+    bottom:370px;
+    right:570px;
+}
+#VariacValC{
+    bottom:345px;
+    right:630px;
+}
+#AmmeterC{
+    bottom:240px;
+    right:740px;
+}
+#VoltmeterC{
+    bottom:215px;
+    right:810px;
+}
+#WattmeterC{
+    bottom:185px;
+    right:880px;
+}
+#numerator{
+    bottom:95px;
+    right:902px;
+
+}
+#denominator1{
+    bottom:65px;
+    right:1015px;
+
+}
+#denominator2{
+    bottom:65px;
+    right:1003px;
+
+}
+#equalto{
+    bottom:80px;
+    right:1002px;
+
+}
+#DeviceC2{
+    bottom:60px;
+    left:205px;
+    width:100px;
+
+}
+#powerfactor{
+    bottom:60px;
+    left:235px;
+
+}
+
+
+/*Variac Slider*/
+
+
+
+
+#Var_Knob {
+    /* pointer-events: none; */
+    -moz-user-select: none;
+user-select: none;
+/* user-drag: none;  */
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+/* Add this css file to any HTML, images will become unselectable and undraggable. this is to have a better UX */
+* {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.nodes label{
+    text-align: center;
+    font-family: 'Zacbel X', sans-serif;
+    overflow: visible;
+position: absolute;
+
+
+font-size: 12px;
+
+border: 2px solid white;
+background-color: white;
+border-radius: 2px;
+
+
+}
+.positive button label{
+    transform: translate(-6px, 20px);
+}
+.nodes{
+    position: relative;
+    top:-205px;
+}
+
+#label11,#label12{
+
+    transform: translate(-8px,-35px);
+}
+#label19,#label20{
+    transform: translate(-8px,-45px);
+}
+#label17{
+    transform: translate(-8px,-35px);
+}
+#label18{
+    transform: translate(-8px,15px);
+}
+.tubelight-labels{
+    position: relative;
+    bottom: 160px;
+    left:500px;
+}
+#label21{
+    position: relative;
+    bottom:25px;
+    left:48px;
+    opacity: 0;
+}
+#label22{
+    position: relative;
+    bottom:25px;
+    left:46px;
+    opacity: 0;
+}
+#label23{
+    position: relative;
+    bottom:25px;
+    left:103px;
+    opacity: 0;
+}
+#label24{
+    position: relative;
+    bottom:25px;
+    left:117px;
+    opacity: 0;
+}
+
+#VRF{
+    position: relative;
+    bottom:58px;
+    left:250px;
+}
+
+.control-panel-buttons button:disabled:hover, #VRF:disabled:hover {
+    background-color: rgba(129, 129, 129, 0.313);
+   color: #919191;
+   cursor: default;
+}
+
+.control-panel-buttons button:disabled:active ,#VRF:disabled:active {
+   background-color: rgba(129, 129, 129, 0.313);
+   color: #919191;
+   border: none;
+   cursor: default;
+}
+
+.formulas input:disabled:-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: #d0d0d0;
+    transition: background-color 0.2s ease-in;
+}
+
+.formulas input:disabled::-webkit-slider-thumb:hover {
+    cursor: default;
+    background-color: #d0d0d0
+}
+
+.formulas input:disabled::-webkit-slider-thumb:active {
+    cursor: default;
+
+}
+
+

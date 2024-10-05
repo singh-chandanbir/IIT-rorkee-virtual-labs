@@ -1,0 +1,19 @@
+/* Making images unselectable */
+img {
+    pointer-events: none;
+    -moz-user-select: none;
+user-select: none;
+/* user-drag: none;  */
+-moz-user-select: none;
+-webkit-user-drag: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+/* Add this css file to any HTML, images will become unselectable and undraggable. this is to have a better UX */
+* {
+    user-select: none; /* supported by Chrome and Opera */
+   -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* Internet Explorer/Edge */
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment</title>
+    <link rel="stylesheet" href="../Style/style.css">
+    <!-- <link rel="stylesheet" href="../Style/disabledrag.css"> -->
+    <link href="../CDN_folder/Font(zacbel-x).css" rel="stylesheet">
+    <link href="../CDN_folder/Font(foco-trial).css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/seven-segment" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@firestitch/jsplumb@2.12.0/dist/js/jsplumb.min.js"></script>
+    <script src="../CDN_folder/ChartCDN.js"></script>
+
+</head>
+
+<body>
+    <div id="container" class="container">
+        <!--ROW1-->
+        <div class="heading">
+            <!--Heading goes here-->
+            <p>TO VERIFY MAXIMUM POWER DISTRIBUTION THEOREM</p>
+        </div>
+
+        <div class="instructions" id="instTab">
+            <div class="insHeading">
+                <p>Instructions</p>
+
+                <ul class="steps">
+                    <li>!!! Click on labels to delete connectinos for the corrusponding node.</li>
+                    <li id="s1" style="color:red ;">Choose a load resistance by adjusting 'RL' slider (5 ohm).</li>
+
+                    <li id="s2">Set up the circuit for experiment.</li>
+                    <ul>
+                        <li>Connect Multimeter across the Load resistance Rl. 5->13, 6->14</li>
+                        <li>Connect ammeter in series with R1, conncet voltmeter across Rl. 3->11, 4->12</li>
+                        <li>Connect PowerSupply to the circuit. 7->9, 8->10</li>
+                        <li>Connect voltmeter to resistance RL 1->13, 2->14</li>
+                        <li>Click on 'CHECK' button to check your connections.</li>
+                    </ul>
+                    <li id="s3"> Click on 'CHECK' button to check your connections.</li>
+                    <li id="s4">Turn on the MCB.</li>
+                    <li id="s5">Turn on the power-supply by clicking on the 'POWER' button, and choose a voltage value.
+                    </li>
+                    <li id="s6">Choose a resistance value of 'R1'.</li>
+                    <li id="s7">Click on 'ADD' button to add observations to the table.</li>
+                    <li id="s8">Keep changing values of resistance until the Power Transfered is Maximum.</li>
+                    <li id="s9">Click 'CALCULATE' button to obtain calculations.</li>
+
+                </ul>
+            </div>
+            <div class="MyLabel">
+                <p>
+                    Instructions
+                </p>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+        <!--ROW2-->
+        <div class="r2">
+
+            <div class="r2c1">
+
+
+                <div class="action-buttons">
+                    <p>ACTION BUTTONS</p>
+                    <div class="control-panel-buttons">
+                        <button id="check">CHECK</button>
+                        <button id="add" disabled="true">ADD</button>
+                        <button id="plot" disabled="true">PLOT</button>
+                        <button id="reset" onclick='window.location.reload();'>RESET</button>
+                        <button id="print" disabled="true">PRINT</button>
+                        <!--THIS IS TO BE KEPT IN A FLEX BOX-->
+                    </div>
+                </div>
+                <!--Row 2 Col 1 Row1-->
+
+                <div class="sliders">
+                    <p>SLIDERS</p>
+
+                    <input type="range" id="R1" , step="0.1" , min="0.1" , max="10" , name="R1" value="0.1"
+                        disabled="true">
+                    <label for="R1">R1</label>
+                    <br>
+                    <input type="range" name="RL" id="RL" , min="0.1" max="10" step="0.1" value="0.1">
+                    <label for="RL">RL</label>
+
+                </div>
+                <!--Row 2 Col 1 Row2-->
+                <div class="o_table">
+                    <p> OBSERVATION TABLE</p>
+                    <div class="table">
+                        <!--TABLE TO BE DISPLAYED HERE-->
+                        <table id="valTable">
+                            <tr>
+                                <th>S.No</th>
+                                <th>Power Supply</th>
+                                <th>R1</th>
+                                <th>Load Resistance</th>
+                                <th>Voltage</th>
+                                <th>Ammeter</th>
+                                <th>Power</th>
+                            </tr>
+
+                        </table>
+                    </div>
+                </div>
+                <!--Row 3 Col 1 -->
+
+
+
+            </div>
+
+
+            <div class="r2c2">
+
+                <div class="circuit">
+                    <p>EXPERIMENT</p>
+                    <div class="c-diag">
+
+                        <div class="mcb">
+
+
+                            <img class="forbidden" src="../Assets/MCB_Off.png" alt="" height="120" width="100" id="mcb">
+                            <button id="mcb_switch" disabled="0"></button>
+                        </div>
+
+
+                        <div class="voltmeter">
+                            <img class="forbidden" src="../Assets/V1.png" width="179" height="179" alt="" id="V">
+                            <img class="forbidden" src="../Assets/Pointer.png" width="44" height="14" alt="" id="P_V">
+                            <button id="p_v"><label onclick="disconnect(0)">1</label></button>
+                            <button id="n_v"><label onclick="disconnect(1)">2</label></button>
+
+                        </div>
+
+
+                        <div class="ammeter">
+                            <img class="forbidden" src="../Assets/A1.png" width="179" height="179" alt="" id="A">
+
+                            <img class="forbidden" src="../Assets/Pointer.png" width="44" height="14" alt="" id="P_A">
+                            <button id="p_a"><label onclick="disconnect(2)">3</label></button>
+                            <button id="n_a"><label onclick="disconnect(3)">4</label></button>
+                        </div>
+
+                        <div class="multimeter">
+                            <img class="forbidden" src="../Assets/multimeter_default.png" alt="" height="240"
+                                width="150" id="M">
+                            <img class="forbidden" src="../Assets/Multimeter pointer.png" alt="" height="240"
+                                width="150" id="P_M">
+                            <button id="p_m"><label id="label5" onclick="disconnect(4)">5</label></button>
+                            <button id="n_m"><label id="label6" onclick="disconnect(5)">6</label></button>
+                            <input type="text" class="SeeOnly" readonly id="Mlt_DISPLAY" value="0">
+                        </div>
+                        <br>
+                        <div class="power-supply">
+                            <img class="forbidden" src="../Assets/PowerSupplyOff.png" height="180" id="power" alt="">
+                            <button id="p_p"><label onclick="disconnect(6)">7</label></button>
+                            <button id="n_p"><label onclick="disconnect(7)">8</label></button>
+                            <button id='p_on' disabled="true"></button>
+                            <input type="text" class="SeeOnly" readonly id="PS_DISPLAY" value="0 V">
+                            <input type="range" name="PSslider" id="PSslider" min="0" max="10" step="0.1" value="0"
+                                disabled="true">
+                        </div>
+
+                        <div class="circuit-diagram">
+                            <img class="forbidden" src="../Assets/Maximum Power Transfer 1.png" height="350"
+                                width=" 500" id='cdiag' alt="">
+                            <button id="c_p_p"><label id="label9" onclick="disconnect(8)">9</label></button>
+                            <button id="c_p_n"><label id="label10" onclick="disconnect(9)">10</label></button>
+                            <button id="c_a_p"><label onclick="disconnect(10)">11</label></button>
+                            <button id="c_a_n"><label onclick="disconnect(11)">12</label></button>
+                            <button id="c_v_p"><label onclick="disconnect(12)">13</label></button>
+                            <button id="c_v_n"><label onclick="disconnect(13)">14</label></button>
+                            <input type="text" class="SeeOnly" readonly id="R1_DISPLAY" value="0.1">
+                            <input type="text" class="SeeOnly" readonly id="Rl_DISPLAY" value="0.1">
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <!--Row 2 Col 2-->
+
+
+            </div>
+
+        </div>
+        <div class="clear"></div>
+
+
+
+
+
+
+
+
+
+        <div class="r3">
+
+                <div class="graph" id="plotContiner">
+                    <p>GRAPH</p>
+                </div>
+                <div class="chart-container">
+                    <canvas id="myPlot" class="MyCanvas" height="480" width="1100">
+
+                    </canvas>
+                </div>
+
+            <div class="calc_output"></div>
+        </div>
+    </div>
+
+
+
+
+    <div class="clear"></div>
+
+
+    </div>
+
+
+</body>
+<script src="../Function/function.js"></script>
+
+</html>

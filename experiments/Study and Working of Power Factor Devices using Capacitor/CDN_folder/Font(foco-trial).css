@@ -1,0 +1,49 @@
+@font-face {
+    font-family: 'Foco Trial';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Foco Trial'), url('../../FONTS/Foco_Trial_Rg.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Foco Trial';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Foco Trial'), url('../../FONTS/Foco_Trial_It.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Foco Trial';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Foco Trial'), url('../../FONTS/Foco_Trial_Lt.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Foco Trial';
+    font-style: italic;
+    font-weight: 300;
+    src: local('Foco Trial'), url('../../FONTS/Foco_Trial_LtIt.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Foco Trial';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Foco Trial'), url('../../FONTS/Foco_Trial_Bd.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Foco Trial';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Foco Trial'), url('../../FONTS/Foco_Trial_BdIt.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Foco Trial';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Foco Trial'), url('../../FONTS/Foco_Trial_Blk.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Foco Trial';
+    font-style: italic;
+    font-weight: 900;
+    src: local('Foco Trial'), url('../../FONTS/Foco_Trial_BlkIt.ttf') format('truetype');
+}
+

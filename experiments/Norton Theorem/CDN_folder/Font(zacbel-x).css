@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Zacbel X';
+    font-style: normal;
+    font-weight: 0;
+    src: local('Zacbel X'), url('../../FONTS/zacbelx-extrabold.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Zacbel X Medium';
+    font-style: normal;
+    font-weight: 0;
+    src: local('Zacbel X Medium'), url('../../FONTS/zacbelx-medium.ttf') format('truetype');
+}
+

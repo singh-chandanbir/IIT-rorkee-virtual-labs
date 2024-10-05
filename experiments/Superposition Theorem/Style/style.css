@@ -1,0 +1,992 @@
+/*BASE STYLING GES HERE*/
+body {
+    background-image: linear-gradient(#eaeaea, #d6d6d6);
+    background-repeat: no-repeat;
+}
+
+.clear {
+    float: none;
+}
+
+.container {
+
+    background-color: #606471;
+    width: 1500px;
+    /* height: 1300px; */
+    height: auto;
+    overflow: hidden;
+    margin: 0 10px;
+    border-radius: 10px;
+}
+
+.heading {
+    height: 60px;
+    width: 1400px;
+    margin: 0 30px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+
+    background-color: #eaeaea;
+    border-radius: 10px;
+
+}
+
+.r2 {
+    float: left;
+
+    width: 1500px;
+    margin: 00px 30px;
+    border-radius: 10px;
+
+}
+
+.r2c1 {
+    float: left;
+
+    width: 500px;
+    height: 300px;
+
+
+    border-radius: 10px;
+
+}
+
+.action-buttons {
+    background-color: #eaeaea;
+    width: 500px;
+    height: 100px;
+
+
+    border-radius: 10px;
+
+}
+
+.formulas {
+    display: block;
+    background-color: #eaeaea;
+    width: 500px;
+    height: 195px;
+    border-radius: 10px;
+    margin: 0 auto;
+
+}
+
+.r2c2 {
+
+    float: left;
+    background-color: rgb(35, 35, 35);
+    width: 870px;
+    height: 600px;
+    border-radius: 10px;
+    margin: 20px 30px;
+
+}
+
+.r3 {
+    float: left;
+
+    width: 1400px;
+    height: 550px;
+    margin: 30px 30px 30px 30px;
+    border-radius: 10px;
+    background-color: white;
+    color: #111111;
+
+
+
+}
+
+.r2c1 .o_table {
+    float: left;
+
+    width: 500px;
+    height: 250px;
+    background-color: #eaeaea;
+    margin-top: 30px;
+    border-radius: 10px;
+
+}
+
+
+.r2c1 .o_table p {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.r3c2 {
+    float: left;
+    background-color: rgb(35, 35, 35);
+    width: 870px;
+    height: 250px;
+    border-radius: 10px;
+    margin: 0px 30px;
+
+}
+
+/*Text Edits Default*/
+.heading p {
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Zacbel X', sans-serif;
+    color: rgb(31, 31, 31);
+}
+
+.action-buttons p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color: rgb(31, 31, 31);
+}
+
+.formulas p,
+label {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color: rgb(31, 31, 31);
+}
+
+.o_table p {
+
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color: rgb(31, 31, 31);
+}
+
+.circuit p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color: #eaeaea;
+}
+
+.calculation p {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Zacbel X', sans-serif;
+    color: #111111;
+}
+
+
+/*Buttons CSS*/
+.action-buttons {
+    border: none;
+
+}
+
+.control-panel-buttons {
+    display: block;
+
+    height: 40px;
+    width: 500px;
+    background-color: #eaeaea;
+
+    border-radius: 10px;
+    text-align: center;
+}
+
+.control-panel-buttons button,#verify {
+    border: none;
+    height: 35px;
+    outline: none;
+    background-color: rgba(129, 129, 129, 0.313);
+
+    margin: 0px 10px;
+    border-radius: 10px;
+
+
+    text-align: center;
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 20px;
+    transition: all 0.25s ease-in, border 0.001s ease-in-out;
+    cursor: pointer;
+}
+
+.control-panel-buttons button:hover ,#verify:hover{
+    background-color: #1e1e1ee8;
+    color: rgb(238, 234, 234);
+
+}
+
+.control-panel-buttons button:active ,#verify:active{
+    background-color: #606471;
+    color: rgb(238, 234, 234);
+    border: 3px solid #6a6b6e;
+}
+
+/*Table Css*/
+.o_table {
+
+
+
+    border-radius: 10px;
+    width: 500px;
+    height: 380px;
+
+
+
+}
+
+.o_table table {
+    width: 500px;
+    text-align: center;
+    padding: 2px;
+
+}
+
+.o_table td {
+    border-radius: 0px;
+    border: 1px solid #1e1e1e;
+}
+
+.o_table th {
+    border-radius: 10px;
+    border: 2px solid #1e1e1e;
+}
+
+
+/*Assets Placement*/
+
+#MCB {
+    position: relative;
+    bottom: 40px;
+}
+
+#A_1 {
+    position: relative;
+    left: 80px;
+}
+
+#A_2 {
+    position: relative;
+    left: 39px;
+}
+
+#A_3 {
+    position: relative;
+    right: 7px;
+}
+
+#P_A1 {
+    position: relative;
+    bottom: 94.5px;
+    right: 64px;
+    transform-origin: 89%;
+}
+
+#P_A2 {
+    position: relative;
+    bottom: 94.5px;
+    right: 105px;
+    transform-origin: 89%;
+}
+
+#P_A3 {
+    position: relative;
+    bottom: 94.5px;
+    right: 150px;
+    transform-origin: 89%;
+}
+
+#power_1 {
+    position: relative;
+    bottom: 120px;
+    right: 30px;
+}
+
+#circuit_diagram {
+    position: relative;
+    right: 105px;
+    bottom: 30px;
+}
+
+#power_2 {
+    position: relative;
+    bottom: 274px;
+    left: 650px;
+}
+
+/*Nodes Placement Start Here*/
+.nodes {
+    position: relative;
+    bottom: 200px;
+    font-weight: bolder;
+    font-size: 12px;
+}
+
+.nodes button {
+    border: none;
+    background: none;
+    background-color: green;
+    float: left;
+    height: 15px;
+    width: 15px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+#p_mcb {
+    position: relative;
+    bottom: 378px;
+    left: 31px;
+    opacity: 0;
+}
+
+#n_mcb {
+    position: relative;
+    bottom: 378px;
+    left: 42px;
+    opacity: 0;
+}
+
+#on_mcb {
+    position: relative;
+    bottom: 394px;
+    right: 12px;
+    width: 70px;
+    opacity: 0;
+}
+
+#p_a1 {
+    position: relative;
+    bottom: 377px;
+    left: 139px;
+}
+
+#n_a1 {
+    position: relative;
+    bottom: 377px;
+    left: 176px;
+}
+
+#p_a2 {
+    position: relative;
+    bottom: 377px;
+    left: 313px;
+}
+
+#n_a2 {
+    position: relative;
+    bottom: 377px;
+    left: 350px;
+}
+
+#p_a3 {
+    position: relative;
+    bottom: 377px;
+    left: 483px;
+}
+
+#n_a3 {
+    position: relative;
+    bottom: 377px;
+    left: 520px;
+}
+
+#p_power1 {
+    position: relative;
+    bottom: 135px;
+    right: 157px;
+}
+
+#n_power1 {
+    position: relative;
+    bottom: 135px;
+    right: 142.5px;
+}
+
+#on_power1 {
+    position: relative;
+    bottom: 196px;
+    right: 85px;
+    height: 25px;
+    width: 25px;
+    opacity: 0;
+}
+
+#c_p_power1 {
+    position: relative;
+    bottom: 193px;
+    right: 42px;
+}
+
+#c_n_power1 {
+    position: relative;
+    bottom: 156px;
+    right: 57px;
+}
+
+#c_p_a1 {
+    position: relative;
+    bottom: 273.5px;
+    right: 45px;
+}
+
+#c_n_a1 {
+    position: relative;
+    bottom: 273.5px;
+    right: 30px;
+}
+
+#c_p_a2 {
+    position: relative;
+    bottom: 240px;
+    left: 120px;
+}
+
+#c_n_a2 {
+    position: relative;
+    bottom: 218px;
+    left: 104px;
+}
+
+#c_p_a3 {
+    position: relative;
+    bottom: 273px;
+    left: 268px;
+}
+
+#c_n_a3 {
+    position: relative;
+    bottom: 273px;
+    left: 282.9px;
+}
+
+#c_p_power2 {
+    position: relative;
+    bottom: 193px;
+    left: 286px;
+}
+
+#c_n_power2 {
+    position: relative;
+    bottom: 155px;
+    left: 271px;
+}
+
+#p_power2 {
+
+    position: relative;
+    bottom: 137px;
+    left: 319px;
+}
+
+#n_power2 {
+    position: relative;
+    bottom: 137px;
+    left: 333px;
+}
+
+#on_power2 {
+    position: relative;
+    bottom: 197px;
+    left: 391.5px;
+    height: 25px;
+    width: 25px;
+    opacity: 0;
+}
+
+/*Instruction Start here*/
+
+.instructions {
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    z-index: +2;
+    filter: drop-shadow(2px 2px 8px rgba(56, 53, 53, 0.315));
+    font-family: 'Foco Trial', sans-serif;
+    font-size: 19px;
+    padding-top: -20px;
+    overflow: visible;
+
+    transition: all 0.2s ease-in-out;
+
+
+    position: absolute;
+
+    top: 40px;
+    left: -300px;
+
+    height: 650px;
+    width: 300px;
+}
+
+.instructions:hover {
+    left: 0px;
+}
+
+.insHeading {
+
+    background-color: #afaeae;
+    border-radius: 8px;
+    margin-right: 0px;
+    margin-left: 10px;
+    text-align: center;
+    margin-top: -10px;
+    font-size: 30px;
+
+    height: 40px;
+    width: 90%;
+}
+
+.steps {
+    margin-top: -20px;
+    margin-left: 0px;
+    margin-right: -5px;
+    text-align: left;
+    padding-top: 0px;
+    border-radius: 10px;
+    font-size: 19px;
+    overflow: scroll;
+    height: 550px;
+}
+
+.MyLabel {
+    background-color: #111111;
+    color: #e8e8e8;
+    writing-mode: vertical-lr;
+    text-orientation: sideways;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 0px 10px 10px 0px;
+
+    height: 120px;
+    width: 50px;
+
+    position: absolute;
+    top: 10px;
+    left: 300px;
+}
+
+#s1 {
+    color: red;
+}
+
+/* Making images unselectable */
+img {
+    pointer-events: none;
+    -moz-user-select: none;
+    user-select: none;
+
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/*Calculation Parts*/
+.calculation p {
+    margin-bottom: -10px;
+}
+
+.calculation input {
+    width: 50px;
+    float: none;
+    margin-top: -55px;
+    position: relative;
+}
+
+#R1C {
+    position: relative;
+    bottom: 420px;
+    left: 50px;
+}
+
+#R2C {
+    position: relative;
+    bottom: 395px;
+    right: 12px;
+}
+
+#R3C {
+    position: relative;
+    bottom: 370px;
+    right: 74px;
+}
+
+#currentSupplyC {
+    bottom: 326px;
+    right: 32px;
+}
+
+#voltageSupplyC {
+    bottom: 303px;
+    right: 94px;
+}
+
+#R1_cs {
+    bottom: 210px;
+    left: 15px;
+}
+
+#sigh1{
+    bottom: 190px;
+    left: 15px;
+}
+
+#R2_cs {
+    bottom: 210px;
+    left: 45px;
+}
+
+#R3_cs {
+    bottom: 210px;
+    left: 75px;
+}
+
+#R1_vs {
+    bottom: 160px;
+    right: 170px;
+}
+
+#R2_vs {
+    bottom: 160px;
+    right: 140px;
+}
+
+#R3_vs {
+    bottom: 160px;
+    right: 110px;
+}
+
+#R1_cv {
+    bottom: 110px;
+    right: 355px;
+}
+
+#R2_cv {
+    bottom: 110px;
+    right: 325px;
+}
+
+#R3_cv {
+    bottom: 110px;
+    right: 295px;
+}
+
+.PSdisplay {
+
+    background-color: rgba(24, 22, 22, 0.834);
+    color: red;
+
+    text-align: center;
+    font-family: 'Seven Segment';
+    font-weight: bold;
+    border: inset;
+    font-size: 20px;
+
+    width: 40px;
+    height: 25px;
+    right: 11em;
+    top: 2em;
+}
+
+#R1Display,
+#R2Display,
+#R3Display {
+    position: relative;
+    width: 70px;
+    height: 40px;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Zacbel X', sans-serif;
+    color: #212020;
+    border-radius: 10px;
+
+
+}
+
+#R1Display {
+    bottom: 230px;
+    right: 145px;
+}
+
+#R2Display {
+    bottom: 140px;
+    right: 50px;
+}
+
+#R3Display {
+    bottom: 230px;
+    right: 115px;
+}
+
+
+
+#PS1Display {
+    position: relative;
+    top: -190px;
+    right: 665px;
+    width: 50px;
+}
+
+#PS2Display {
+    position: relative;
+    top: -190px;
+    right: 49px;
+    width: 50px;
+}
+
+.formulas input {
+    -webkit-appearance: none;
+    width: 300px;
+    border-radius: 10px;
+    background-color: #3a3a3a;
+
+    margin: 08px 80px;
+}
+
+.formulas input::-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: #d0d0d0;
+    transition: background-color 0.2s ease-in;
+}
+
+.formulas input::-webkit-slider-thumb:hover {
+    cursor: grab;
+    background-color: #ffffff;
+}
+
+.formulas input::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
+
+.formulas label {
+    position: relative;
+    right: 420px;
+    bottom: 5px;
+}
+
+
+#P1 {
+    z-index: +2;
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 70px;
+    bottom: 188px;
+    left: 92px;
+    background-color: #111111;
+    border-radius: 2px;
+
+}
+
+#P1::-webkit-slider-thumb {
+    z-index: +2;
+    appearance: none;
+    height: 30px;
+    border-radius: 2px;
+    width: 10px;
+    cursor: grab;
+    background-color: #aa0a0a;
+
+
+}
+
+#P1::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
+
+#P1:disabled {
+    z-index: +2;
+    background-color: #808080;
+    cursor: default;
+
+
+}
+
+#P1:disabled::-webkit-slider-thumb {
+
+    background-color: #808080;
+    cursor: default;
+
+}
+
+#P2 {
+    z-index: +2;
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 70px;
+    bottom: 188px;
+    left: 695px;
+
+    background-color: #111111;
+    border-radius: 2px;
+
+}
+
+#P2::-webkit-slider-thumb {
+    z-index: +2;
+    appearance: none;
+    height: 30px;
+    border-radius: 2px;
+    width: 10px;
+    cursor: grab;
+    background-color: #aa0a0a;
+
+
+}
+
+#P2::-webkit-slider-thumb:active {
+    cursor: grabbing;
+}
+
+#P2:disabled {
+    z-index: +2;
+    background-color: #808080;
+    cursor: default;
+
+
+}
+
+#P2:disabled::-webkit-slider-thumb {
+
+    background-color: #808080;
+    cursor: default;
+
+}
+
+
+.nodes button label {
+    text-align: center;
+    font-family: 'Zacbel X', sans-serif;
+    overflow: visible;
+    position: absolute;
+
+
+    font-size: 10px;
+
+    border: 2px solid white;
+    background-color: white;
+    border-radius: 2px;
+
+
+}
+
+.calculation label {
+    text-align: center;
+    padding-bottom: 2px;
+    font-family: 'Zacbel X', sans-serif;
+    overflow: visible;
+    position: absolute;
+
+    background-image: radial-gradient(#606060,#2e2e2e);
+
+    font-size: 20px;
+    color:rgb(255, 255, 255);
+
+    border-radius: 5px;
+    height: 25px;
+    width: 25px;
+
+}
+.calculation label:hover{
+    cursor:pointer;
+    background-image: radial-gradient(#414141,#606060);
+}
+
+.positive button label {
+    transform: translate(-5px, 20px);
+}
+
+.nodes {
+    position: relative;
+    top: -200px;
+}
+
+#label9,
+#label10,
+#label13,
+#label14 {
+    transform: translate(-28px, -8px);
+}
+
+#label17,
+#label18 {
+    transform: translate(12px, -8px);
+}
+
+#R1_cvU {
+    position: relative;
+    bottom: 64px;
+    right: 540px;
+}
+
+#R2_cvU {
+    position: relative;
+    bottom: 64px;
+    right: 510px;
+}
+
+#R3_cvU {
+    position: relative;
+    bottom: 64px;
+    right: 480px;
+}
+
+#verify {
+    position: relative;
+    bottom: 58px;
+    right: 450px;
+}
+
+.SeeOnly:hover {
+    cursor: default;
+}
+
+.SeeOnly:focus {
+    cursor: default;
+    outline: none;
+}
+
+changeable-symbols{
+    position: relative;
+    bottom:178px;
+    right:30px;
+
+}
+#sign2{
+    margin-left: 30px;
+}
+#sign3{
+    margin-left: 60px;
+}
+
+.control-panel-buttons button:disabled:hover,#verify:disabled:hover {
+    background-color: rgba(129, 129, 129, 0.313);
+   color: #919191;
+   cursor: default;
+}
+
+.control-panel-buttons button:disabled:active,#verify:disabled:active {
+   background-color: rgba(129, 129, 129, 0.313);
+   color: #919191;
+   border: none;
+   cursor: default;
+
+}
+
+.formulas input:disabled:-webkit-slider-thumb {
+    appearance: none;
+    height: 20px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: #d0d0d0;
+    transition: background-color 0.2s ease-in;
+}
+
+.formulas input:disabled::-webkit-slider-thumb:hover {
+    cursor: default;
+    background-color: #d0d0d0
+}
+
+.formulas input:disabled::-webkit-slider-thumb:active {
+    cursor: default;
+
+}
+
